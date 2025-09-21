@@ -1,31 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - V. V. Iyer</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="main.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>V. V. Iyer — Enterprise transformation</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core style -->
+  <link rel="stylesheet" href="style.css?v=5">
+
+  <!-- Basic SEO -->
+  <meta name="description" content="V. V. Iyer — 35+ years running ERP, WMS & RFID programs. Turning enterprise IT from cost centre into a growth engine.">
 </head>
 <body>
-  <header>
-    <div class="logo">VVI</div>
-    <nav id="nav-menu">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="insights.html">Insights</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="menu-toggle">☰</button>
+  <!-- Header (shared across pages) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Home - VVI">
+        <div class="brand-badge">VVI</div>
+        <div class="brand-text">
+          <div class="name">Vaidyanathan Venkataraman</div>
+          <div class="muted">CIO · Enterprise IT · ERP</div>
+        </div>
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="insights.html" class="nav-link">Insights</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a class="btn-cv" href="assets/VVI-CV.pdf" rel="noopener">Download CV</a>
+      </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+        <span class="burger"></span>
+      </button>
+    </div>
   </header>
-  <main class="hero">
-    <div class="hero-text">
-      <h1>Turning Enterprise IT from Cost Centre into Growth Engine</h1>
-      <p>I partner with leadership teams to align technology investments with measurable business outcomes.</p>
-    </div>
-    <div class="hero-photo">
-      <img src="assets/profile-thumb.webp" alt="V. V. Iyer" class="round-photo" />
-    </div>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <span class="kicker">Enterprise transformation leader</span>
+          <h1 class="hero-title">Turning enterprise IT from cost centre into growth engine</h1>
+          <p class="hero-sub">I partner with leadership teams to align technology investments with measurable business outcomes — practical pilots, clear KPIs and governance that prevents rework.</p>
+
+          <p class="hero-cta">
+            <a class="cta-primary" href="contact.html">Work with me</a>
+            <a class="cta-ghost" href="insights.html">See insights</a>
+          </p>
+
+          <ul class="quick-facts">
+            <li>35+ years · ERP · WMS · RFID</li>
+            <li>Practical pilots · Fast payback</li>
+            <li>Vendor & program governance</li>
+          </ul>
+        </div>
+
+        <div class="hero-image" aria-hidden="true">
+          <!-- Round profile avatar — file should be assets/profile.jpg (or change src) -->
+          <img class="avatar" src="assets/profile.jpg" alt="V. V. Iyer" width="480" height="480">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Minimal content section so other pages can reuse same header/footer -->
+    <section class="content container">
+      <!-- placeholder / link to more content -->
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made with clarity · V. V. Iyer · © 2025</small>
+    </div>
+  </footer>
+
+  <script src="main.js?v=5"></script>
 </body>
 </html>
