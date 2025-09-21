@@ -4,13 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — V. V. Iyer</title>
-  <meta name="description" content="About V. V. Iyer — CIO and enterprise IT leader with 35+ years of experience in ERP, WMS, RFID, and business transformation." />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <meta name="description" content="V. V. Iyer — Enterprise IT leader. 35+ years delivering ERP, WMS, RFID and transformation programs that drive measurable business outcomes." />
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="index.html" aria-label="Home — V. V. Iyer">
         <div class="logo-badge">VVI</div>
         <div class="brand-text">
           <div class="brand-name">Vaidyanathan Venkataraman</div>
@@ -18,63 +20,130 @@
         </div>
       </a>
 
-      <nav class="site-nav" id="siteNavAbout">
+      <nav class="site-nav" id="siteNav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link active">About</a>
         <a href="insights.html" class="nav-link">Insights</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <a href="assets/VVI-CV.pdf" class="btn btn-ghost">Download CV</a>
+        <a href="assets/VVI-CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
       </nav>
 
-      <button class="menu-toggle" id="menuToggleAbout" aria-label="Toggle menu">
-        <span class="burger"></span>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span class="burger" aria-hidden="true"></span>
       </button>
     </div>
   </header>
 
+  <!-- Main -->
   <main class="page about-page">
-    <section class="hero small-hero">
+    <!-- Compact hero / masthead -->
+    <section class="hero small-hero" style="padding-top:28px;padding-bottom:18px">
       <div class="container">
-        <h1>Three Decades of Enterprise Transformation</h1>
-        <p class="lead">Turning complex IT challenges into strategic business advantages through pragmatic delivery and governance.</p>
+        <h1 style="margin:0 0 12px;font-size:clamp(28px,5.8vw,40px)">Three decades of practical IT leadership</h1>
+        <p class="hero-sub" style="margin:0;color:var(--muted);max-width:64%">
+          I partner with leadership teams to convert technology investments into measurable performance gains — fast pilots, strict KPIs, and governance that prevents rework.
+        </p>
       </div>
     </section>
 
-    <section class="container about-content">
+    <section class="container about-content" style="padding-top:20px;padding-bottom:48px">
       <div class="split">
-        <div>
-          <h2>About & Approach</h2>
-          <p>I combine business strategy with hands-on delivery to make IT a growth enabler. From SAP ECC rollouts to RFID projects that improved inventory accuracy to 97%, I focus on pilots that pay back and governance that prevents scope creep. Former colleagues describe me as approachable, intellectually sharp, and results-driven.</p>
+        <!-- Left: Story + UAP + Testimonials -->
+        <div style="flex:1;min-width:0">
+          <div class="card" style="margin-bottom:18px">
+            <h2>My approach — practical, measurable, repeatable</h2>
+            <p class="text-muted">
+              After 35+ years across FMCG, Chemicals, Paper, Engineering and Ceramics, I saw the same problem: technology projects that look strategic but fail in adoption or governance.
+              So I changed the playbook — start small, measure early, enforce governance, scale fast. That practice turned pilots into programs that deliver predictable value.
+            </p>
+          </div>
 
-          <h3>What I do</h3>
-          <ul>
-            <li>ERP strategy, implementation & adoption</li>
-            <li>WMS & RFID programs</li>
-            <li>Program governance & vendor management</li>
-          </ul>
+          <div class="card" style="margin-bottom:18px">
+            <h3>Unique value proposition</h3>
+            <p class="text-muted">
+              I bridge business strategy with technology execution — translating board-level goals into program designs that protect benefits and accelerate adoption.
+              You get calm leadership, tight governance, and delivery that doesn’t ask to be babysat.
+            </p>
+
+            <ul style="margin-top:12px;color:var(--muted);list-style:none;padding-left:0">
+              <li>Fast pilots with measurable KPIs</li>
+              <li>Vendor control & governance that prevents scope creep</li>
+              <li>Clear translation from investment to performance</li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-bottom:18px">
+            <h3>Selected case studies</h3>
+            <ul class="text-muted" style="margin-top:12px">
+              <li><strong>SAP ECC 6.0</strong> — Global rollouts in India & South Korea with adoption plans and governance.</li>
+              <li><strong>RFID program</strong> — Improved inventory accuracy to <strong>97%</strong> and reduced reconciliation effort.</li>
+              <li><strong>Barcode rollout</strong> — For a ceramics manufacturer: fewer shortages, less damage, faster dispatch.</li>
+              <li><strong>WMS pilots</strong> — KPI-driven pilots that created quick executive buy-in and scale.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>What others say</h3>
+
+            <!-- Testimonials integrated inline -->
+            <blockquote style="margin:12px 0;padding-left:14px;border-left:4px solid rgba(43,159,255,0.18);color:var(--muted)">
+              "A knowledgeable yet perceptive manager — intellectually sharp, approachable, and always ready to learn." — Former colleague
+            </blockquote>
+
+            <blockquote style="margin:12px 0;padding-left:14px;border-left:4px solid rgba(124,58,237,0.14);color:var(--muted)">
+              "Delivers results with calm leadership and zero drama. Trusted to translate tech into measurable outcomes." — Board member
+            </blockquote>
+
+            <p style="margin-top:12px;color:var(--muted)">If you want a steady hand that turns complex programs into predictable outcomes, we should talk.</p>
+          </div>
         </div>
 
-        <aside class="stats">
-          <div class="profile-card">
-            <img src="assets/profile-thumb.webp" alt="V V Iyer" class="profile-circle" />
-            <h3>V. V. Iyer</h3>
-            <p>35+ years · ERP · WMS · RFID</p>
-            <ul class="basic-list">
-              <li>100+ Projects</li>
-              <li>Global SAP rollouts</li>
-            </ul>
+        <!-- Right: Compact profile card -->
+        <aside style="width:320px;flex-shrink:0">
+          <div class="stats">
+            <div class="profile-card card" style="text-align:center">
+              <!-- small round face thumbnail -->
+              <img src="assets/profile-thumb.webp" srcset="assets/profile-thumb.webp 400w, assets/profile-thumb@2x.webp 800w"
+                   sizes="(max-width:480px) 120px, 140px"
+                   class="profile-circle" alt="V. V. Iyer" loading="lazy" />
+
+              <h3 style="margin-top:12px;margin-bottom:6px">V. V. Iyer</h3>
+              <p class="text-muted" style="margin:0 0 12px">35+ years • ERP · WMS · RFID</p>
+
+              <div style="display:flex;gap:10px;justify-content:center;margin-top:8px">
+                <a href="mailto:iyervv24@gmail.com" class="btn btn-ghost">Email</a>
+                <a href="assets/VVI-CV.pdf" class="btn btn-primary" target="_blank" rel="noopener">Download CV</a>
+              </div>
+
+              <hr style="border:none;border-top:1px solid rgba(15,23,36,0.04);margin:14px 0" />
+
+              <div style="text-align:left;color:var(--muted);font-size:0.95rem">
+                <strong>Quick facts</strong>
+                <ul style="list-style:none;padding-left:0;margin-top:8px">
+                  <li>Delivered global SAP programs</li>
+                  <li>Led RFID & WMS rollouts</li>
+                  <li>Programs across FMCG & manufacturing</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="margin-top:16px" class="card">
+              <h4 style="margin-top:0">How I engage</h4>
+              <p class="text-muted" style="margin:0">Selective advisory, sprint-style pilots, and governance design — I focus on programs that return value within quarters, not years.</p>
+            </div>
           </div>
         </aside>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <small>Made with clarity · V. V. Iyer · © 2025</small>
+      <small class="text-muted">Made with clarity · V. V. Iyer · © 2025</small>
     </div>
   </footer>
 
-  <script src="main.js?v=2"></script>
+  <script src="main.js?v=5"></script>
 </body>
 </html>
