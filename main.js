@@ -1,25 +1,23 @@
+// small nav toggles for mobiles (works across pages)
+function wireHamburger(btnId, navSelector) {
+  const btn = document.getElementById(btnId);
+  const nav = document.querySelector(navSelector);
+  if (!btn || !nav) return;
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+}
 
-document.addEventListener('DOMContentLoaded', function(){
-  const btn = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav');
-  if(btn && nav){
-    btn.addEventListener('click', function(e){
-      e.stopPropagation();
-      nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', nav.classList.contains('open'));
-    });
-    document.addEventListener('click', function(e){
-      if(!nav.contains(e.target) && !btn.contains(e.target)){
-        nav.classList.remove('open'); btn.setAttribute('aria-expanded','false');
-      }
-    });
+// Try wiring multiple hamburger+nav combos (each page uses an ID)
+wireHamburger('hamburger','nav.site-nav');
+wireHamburger('hamburger2','nav.site-nav');
+wireHamburger('hamburger3','nav.site-nav');
+wireHamburger('hamburger4','nav.site-nav');
+
+// Close mobile nav on link click (progressive)
+document.addEventListener('click', (e) => {
+  if (e.target.matches('.site-nav .nav-link')) {
+    const nav = document.querySelector('nav.site-nav.open');
+    if (nav) nav.classList.remove('open');
   }
-  // set active nav
-  const path = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav a').forEach(a=> a.classList.toggle('active', a.getAttribute('href').includes(path)));
-  // smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a=> a.addEventListener('click', e=>{
-    e.preventDefault();
-    document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth', block:'start'});
-  }));
 });
