@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VV Iyer | Enterprise IT Transformation Leader</title>
+    <meta name="description" content="35+ years of ERP implementations, WMS optimization, and enterprise transformation. Turning IT departments from cost centers into growth engines.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ===== MODERN INTERACTIVE WEBSITE ===== */
+        
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* CSS Variables - Modern Color Scheme */
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            
+            --background: #fefefe;
+            --surface: #ffffff;
+            --surface-elevated: #f8fafc;
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            
+            --gradient-primary: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            
+            --radius: 0.5rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --space-3xl: 6rem;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #0f172a;
+                --surface: #1e293b;
+                --surface-elevated: #334155;
+                --border: #475569;
+                --border-light: #334155;
+                --text-primary: #f8fafc;
+                --text-secondary: #cbd5e1;
+                --text-muted: #64748b;
+            }
+        }
+        
+        /* Base Styles */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--background);
+            overflow-x: hidden;
+        }
+        
+        /* Scroll Progress */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: var(--gradient-primary);
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 100;
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+        
+        .nav-logo .logo-text {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: 0.05em;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: var(--space-xl);
+        }
+        
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Mobile Menu */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        
+        .nav-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--text-primary);
+            transition: var(--transition);
+        }
+        
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 120px 0 var(--space-3xl);
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: var(--space-3xl);
+            align-items: center;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-xs) var(--space-md);
+            background: var(--surface-elevated);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            margin-bottom: var(--space-lg);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards 0.2s;
+        }
+        
+        .badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--secondary);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.1); }
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: var(--space-lg);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards 0.4s;
+        }
+        
+        .title-line {
+            display: block;
+        }
+        
+        .title-line.highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+            max-width: 500px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards 0.6s;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: var(--space-md);
+            align-items: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards 0.8s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) var(--space-lg);
+            border-radius: var(--radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--surface-elevated);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn.large {
+            padding: var(--space-md) var(--space-xl);
+            font-size: 1.1rem;
+        }
+        
+        .btn-arrow {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            font-size: 0.875rem;
+            transition: var(--transition);
+        }
+        
+        .btn:hover .btn-arrow {
+            transform: translateX(2px);
+        }
+        
+        /* ===== PROFILE CARD ===== */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInScale 0.8s ease forwards 1s;
+        }
+        
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .profile-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-xl);
+            text-align: center;
+            position: relative;
+            max-width: 320px;
+            transition: var(--transition);
+        }
+        
+        .profile-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        
+        .profile-image-container {
+            position: relative;
+            margin-bottom: var(--space-lg);
+            display: flex;
+            justify-content: center;
+        }
+        
+        .profile-image, .profile-placeholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--border);
+            transition: var(--transition);
+        }
+        
+        .profile-image {
+            object-fit: cover;
+            object-position: center top;
+        }
+        
+        .profile-placeholder {
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        
+        .profile-image:hover, .profile-placeholder:hover {
+            transform: scale(1.05);
+            border-color: var(--primary);
+        }
+        
+        .profile-status {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--secondary);
+        }
+        
+        .profile-info h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+        
+        .profile-info p {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-lg);
+            font-size: 0.9rem;
+        }
+        
+        .profile-stats {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            counter-reset: none;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+        
+        /* ===== METRICS SECTION ===== */
+        .metrics {
+            padding: var(--space-3xl) 0;
+            background: var(--surface-elevated);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .metric-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-md);
+            padding: var(--space-xl);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .metric-item.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .metric-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary);
+        }
+        
+        .metric-icon {
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        
+        .metric-content h3 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+        
+        .metric-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .metric-description {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            padding: var(--space-3xl) 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+        
+        .service-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .service-card.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+            transition: left 0.8s;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary);
+        }
+        
+        .service-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-icon {
+            color: var(--primary);
+        }
+        
+        .service-badge {
+            background: var(--surface-elevated);
+            color: var(--text-secondary);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .service-card h3 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+        
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .service-features span {
+            background: var(--surface-elevated);
+            color: var(--text-secondary);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .service-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        .link-arrow {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            transition: var(--transition);
+        }
+        
+        .service-link:hover .link-arrow {
+            transform: translateX(2px);
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .cta {
+            padding: var(--space-3xl) 0;
+            background: var(--surface-elevated);
+        }
+        
+        .cta-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+        
+        .cta-content p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .cta-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+        }
+        
+        .cta-note {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: var(--space-3xl) 0 var(--space-lg);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--space-xl);
+            align-items: start;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-brand .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-xs);
+            display: block;
+        }
+        
+        .footer-tagline {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-contact a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .footer-contact a:hover {
+            color: white;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: var(--space-lg);
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+        
+        /* ===== MODAL STYLES ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            backdrop-filter: blur(4px);
+        }
+        
+        .modal-content {
+            background-color: var(--surface);
+            margin: 15% auto;
+            padding: var(--space-xl);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            width: 90%;
+            max-width: 500px;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .close {
+            color: var(--text-muted);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close:hover {
+            color: var(--text-primary);
+        }
+        
+        .modal h2 {
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            background: var(--background);
+            color: var(--text-primary);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+                text-align: center;
+            }
+            
+            .hero-visual {
+                order: -1;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                margin: var(--space-sm);
+                padding: var(--space-md);
+                flex-direction: column;
+                gap: var(--space-sm);
+                display: none;
+            }
+            
+            .nav-menu.open {
+                display: flex;
+            }
+            
+            .nav-toggle {
+                display: flex;
+            }
+            
+            .hero {
+                padding: 100px 0 var(--space-2xl);
+            }
+            
+            .metrics-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--space-lg);
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container,
+            .nav-container,
+            .hero-container {
+                padding-left: var(--space-sm);
+                padding-right: var(--space-sm);
+            }
+            
+            .profile-card {
+                max-width: 280px;
+                padding: var(--space-lg);
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero-actions,
+            .cta-actions {
+                width: 100%;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* ===== UTILITY CLASSES ===== */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        
+        .mt-0 { margin-top: 0; }
+        .mt-1 { margin-top: var(--space-xs); }
+        .mt-2 { margin-top: var(--space-sm); }
+        .mt-3 { margin-top: var(--space-md); }
+        .mt-4 { margin-top: var(--space-lg); }
+        .mt-5 { margin-top: var(--space-xl); }
+        
+        .mb-0 { margin-bottom: 0; }
+        .mb-1 { margin-bottom: var(--space-xs); }
+        .mb-2 { margin-bottom: var(--space-sm); }
+        .mb-3 { margin-bottom: var(--space-md); }
+        .mb-4 { margin-bottom: var(--space-lg); }
+        .mb-5 { margin-bottom: var(--space-xl); }
+        
+        .d-none { display: none; }
+        .d-block { display: block; }
+        .d-inline { display: inline; }
+        .d-inline-block { display: inline-block; }
+        .d-flex { display: flex; }
+        .d-grid { display: grid; }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-text">VV IYER</a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#insights" class="nav-link">Insights</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">ENTERPRISE TRANSFORMATION</span>
+                    <div class="badge-dot"></div>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Turning Enterprise IT</span>
+                    <span class="title-line highlight">from Cost Center</span>
+                    <span class="title-line">into Growth Engine</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Strategic ERP implementations, WMS optimization, and digital transformation 
+                    that deliver measurable business outcomes. 35+ years of proven expertise 
+                    across diverse industries.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Start Transformation</span>
+                        <div class="btn-arrow">→</div>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>Learn More</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="profile-card floating">
+                    <div class="profile-image-container">
+                        <div class="profile-placeholder">
+                            <span>VV</span>
+                        </div>
+                        <div class="profile-status">
+                            <div class="status-dot"></div>
+                            <span>Available</span>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>VV Iyer</h3>
+                        <p>Enterprise IT Transformation Leader</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number" data-count="35">0</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="100">0</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-count="240">0</span>
+                                <span class="stat-label">Avg ROI%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics" id="metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M28 14L16 2L4 14v16h8v-8h8v8h8V14z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-number">200-300%</h3>
+                        <p class="metric-label">Average ROI</p>
+                        <span class="metric-description">Typical return on ERP investments</span>
+                    </div>
+                </div>
+                
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M16 8v8l4 4" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-number">25-40%</h3>
+                        <p class="metric-label">Efficiency Gain</p>
+                        <span class="metric-description">Operational improvement achieved</span>
+                    </div>
+                </div>
+                
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32">
+                            <rect x="2" y="8" width="28" height="20" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="8" cy="18" r="2" fill="currentColor"/>
+                            <circle cx="16" cy="18" r="2" fill="currentColor"/>
+                            <circle cx="24" cy="18" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-number">99.8%</h3>
+                        <p class="metric-label">Success Rate</p>
+                        <span class="metric-description">Project completion with ROI</span>
+                    </div>
+                </div>
+                
+                <div class="metric-item">
+                    <div class="metric-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32">
+                            <path d="M16 2l4 8h8l-6 6l2 8l-8-4l-8 4l2-8l-6-6h8z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="metric-content">
+                        <h3 class="metric-number">50+</h3>
+                        <p class="metric-label">Organizations</p>
+                        <span class="metric-description">Successfully transformed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="services" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About VV Iyer</h2>
+                <p class="section-subtitle">35+ years of enterprise transformation excellence</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M20 12v8l6 6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Experience</div>
+                    </div>
+                    <h3>Professional Journey</h3>
+                    <p>Over three decades of enterprise technology leadership, transforming how organizations leverage IT as a strategic business enabler rather than just a cost center.</p>
+                    <div class="service-features">
+                        <span>35+ Years Experience</span>
+                        <span>100+ Projects</span>
+                        <span>50+ Organizations</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <path d="M20 2l4 8h8l-6 6l2 8l-8-4l-8 4l2-8l-6-6h8z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Excellence</div>
+                    </div>
+                    <h3>Proven Methodology</h3>
+                    <p>A proven 5-phase approach that ensures successful enterprise transformations with measurable business outcomes and sustainable adoption.</p>
+                    <div class="service-features">
+                        <span>Business-First Approach</span>
+                        <span>Data-Driven Results</span>
+                        <span>Transformation Focus</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="4" y="8" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M10 16h6v8h-6zm8-2h6v10h-6zm8 4h6v6h-6z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Impact</div>
+                    </div>
+                    <h3>Industry Experience</h3>
+                    <p>Cross-industry expertise delivering tailored transformation solutions across Manufacturing, Retail, Healthcare, Financial Services, Logistics, and Energy sectors.</p>
+                    <div class="service-features">
+                        <span>240% Average ROI</span>
+                        <span>99.8% Success Rate</span>
+                        <span>Global Reach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Capabilities</h2>
+                <p class="section-subtitle">Comprehensive enterprise transformation expertise</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="4" y="4" width="32" height="32" rx="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M12 20h8m-8-6h12m-12 12h16" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Strategic</div>
+                    </div>
+                    <h3>ERP Implementation Excellence</h3>
+                    <p>Large-scale ERP transformations across SAP, Oracle, and Microsoft platforms. Business process optimization and change management for sustainable adoption.</p>
+                    <div class="service-features">
+                        <span>SAP & Oracle Expertise</span>
+                        <span>Process Reengineering</span>
+                        <span>Change Management</span>
+                    </div>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="2" y="8" width="36" height="24" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M8 16h6v8h-6zm10-4h6v12h-6zm10 2h6v10h-6z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Innovation</div>
+                    </div>
+                    <h3>WMS & RFID Solutions</h3>
+                    <p>Warehouse management systems with RFID integration delivering 99.8% inventory accuracy and 40% faster order fulfillment across global operations.</p>
+                    <div class="service-features">
+                        <span>RFID Integration</span>
+                        <span>Real-time Tracking</span>
+                        <span>Inventory Optimization</span>
+                    </div>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M20 12v8l6 6" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Leadership</div>
+                    </div>
+                    <h3>Digital Transformation</h3>
+                    <p>Converting IT departments from cost centers into strategic growth engines. Cloud migration, process automation, and organizational change leadership.</p>
+                    <div class="service-features">
+                        <span>Cloud Migration</span>
+                        <span>Process Automation</span>
+                        <span>IT Strategy</span>
+                    </div>
+                    <a href="#contact" class="service-link">
+                        <span>Learn More</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section class="services" id="insights">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Insights</h2>
+                <p class="section-subtitle">Strategic perspectives on enterprise transformation</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="4" y="4" width="32" height="32" rx="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M12 20h8m-8-6h12m-12 12h16" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">ERP Strategy</div>
+                    </div>
+                    <h3>ERP Programs That Scale</h3>
+                    <p>Lessons from SAP ECC 6.0 implementations in India & South Korea — governance, data and rollout strategy for successful enterprise transformations.</p>
+                    <div class="service-features">
+                        <span>Sep 2025</span>
+                        <span>8 min read</span>
+                        <span>Case Study</span>
+                    </div>
+                    <a href="#contact" class="service-link">
+                        <span>Read More</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <rect x="2" y="8" width="36" height="24" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M8 16h6v8h-6zm10-4h6v12h-6zm10 2h6v10h-6z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">WMS Innovation</div>
+                    </div>
+                    <h3>RFID Drives 97% Accuracy</h3>
+                    <p>How an RFID program improved inventory accuracy across sites and reduced reconciliation effort, delivering measurable operational improvements.</p>
+                    <div class="service-features">
+                        <span>Aug 2025</span>
+                        <span>6 min read</span>
+                        <span>Success Story</span>
+                    </div>
+                    <a href="#contact" class="service-link">
+                        <span>Read More</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M20 12v8l6 6" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-badge">Leadership</div>
+                    </div>
+                    <h3>WMS Pilots with Clear KPIs</h3>
+                    <p>Pilots designed with KPI-driven gates and measurement frameworks. Practical governance and vendor management lessons from global programs.</p>
+                    <div class="service-features">
+                        <span>Jun 2025</span>
+                        <span>10 min read</span>
+                        <span>Methodology</span>
+                    </div>
+                    <a href="#contact" class="service-link">
+                        <span>Read More</span>
+                        <div class="link-arrow">→</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Enterprise?</h2>
+                <p>Let's discuss how strategic technology implementation can turn your IT challenges into competitive advantages and sustainable growth opportunities.</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary large" onclick="openContactModal()">
+                        <span>Start Your Transformation</span>
+                        <div class="btn-arrow">→</div>
+                    </button>
+                    <div class="cta-note">
+                        <span>Complimentary initial consultation • Response within 24 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContactModal()">&times;</span>
+            <h2>Get In Touch</h2>
+            <p class="mb-4">Reach out for advisory or transformation projects. Please include a timeline and high-level budget in your message for faster alignment.</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company (Optional)</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Please describe your project, timeline, and budget range for faster alignment."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span>Send Message</span>
+                    <div class="btn-arrow">→</div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-text">VV IYER</span>
+                    </div>
+                    <p class="footer-tagline">Transforming Enterprise IT Leadership</p>
+                    <div class="footer-contact">
+                        <a href="mailto:iyervv24@gmail.com">iyervv24@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#insights">Insights</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 VV Iyer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== JAVASCRIPT FOR INTERACTIVITY =====
+        
+        // Scroll Progress Bar
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        }
+        
+        // Smooth Scrolling for Navigation
+        function initSmoothScrolling() {
+            const navLinks = document.querySelectorAll('.nav-link, .footer-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        // Close mobile menu if open
+                        document.getElementById('navMenu').classList.remove('open');
+                        document.getElementById('navToggle').classList.remove('active');
+                    }
+                });
+            });
+        }
+        
+        // Mobile Navigation Toggle
+        function initMobileNav() {
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+                navToggle.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                    navToggle.classList.remove('active');
+                }
+            });
+        }
+        
+        // Number Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number[data-count]');
+            
+            const observerOptions = {
+                threshold: 0.7
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-count'));
+                        let current = 0;
+                        const increment = target / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                counter.textContent = target + (target === 240 ? '' : target === 35 ? '+' : '+');
+                                clearInterval(timer);
+                            } else {
+                                counter.textContent = Math.floor(current) + (target === 240 ? '' : target === 35 ? '+' : '+');
+                            }
+                        }, 30);
+                        observer.unobserve(counter);
+                    }
+                });
+            }, observerOptions);
+            
+            counters.forEach(counter => observer.observe(counter));
+        }
+        
+        // Scroll Animation for Cards
+        function initScrollAnimations() {
+            const cards = document.querySelectorAll('.metric-item, .service-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('in-view');
+                        }, index * 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            cards.forEach(card => observer.observe(card));
+        }
+        
+        // Contact Modal Functions
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Contact Form Handler
+        function initContactForm() {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(form);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const company = formData.get('company');
+                const message = formData.get('message');
+                
+                // Simulate form submission
+                alert(`Thank you ${name}! Your message has been received. I'll respond within 24 hours.`);
+                
+                // Reset form and close modal
+                form.reset();
+                closeContactModal();
+            });
+        }
+        
+        // Active Navigation Link on Scroll
+        function updateActiveNavOnScroll() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        }
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('contactModal');
+            if (e.target === modal) {
+                closeContactModal();
+            }
+        });
+        
+        // Keyboard accessibility for modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeContactModal();
+            }
+        });
+        
+        // Navbar background change on scroll
+        function initNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+                } else {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+                    navbar.style.boxShadow = 'none';
+                }
+            });
+        }
+        
+        // Parallax effect for hero section
+        function initParallax() {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                if (hero && scrolled < window.innerHeight) {
+                    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        }
+        
+        // Loading animation
+        function initLoadingAnimation() {
+            window.addEventListener('load', () => {
+                document.body.classList.add('loaded');
+            });
+        }
+        
+        // Initialize all functions when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initSmoothScrolling();
+            initMobileNav();
+            animateCounters();
+            initScrollAnimations();
+            initContactForm();
+            updateActiveNavOnScroll();
+            initNavbarScroll();
+            initParallax();
+            initLoadingAnimation();
+            
+            // Update scroll progress on scroll
+            window.addEventListener('scroll', updateScrollProgress);
+            
+            // Initial scroll progress update
+            updateScrollProgress();
+        });
+        
+        // Performance optimization - throttle scroll events
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+        
+        // Apply throttling to scroll events
+        window.addEventListener('scroll', throttle(updateScrollProgress, 10));
+        window.addEventListener('scroll', throttle(updateActiveNavOnScroll, 100));
+        
+        // Add loading states for better UX
+        function showLoading() {
+            document.body.style.cursor = 'wait';
+        }
+        
+        function hideLoading() {
+            document.body.style.cursor = 'default';
+        }
+        
+        // Add error handling for form submission
+        function handleFormError(error) {
+            console.error('Form submission error:', error);
+            alert('Sorry, there was an error sending your message. Please try again or contact directly via email.');
+        }
+        
+        // Add success animation
+        function showSuccessMessage() {
+            const successDiv = document.createElement('div');
+            successDiv.innerHTML = `
+                <div style="
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--secondary);
+                    color: white;
+                    padding: 1rem 1.5rem;
+                    border-radius: var(--radius);
+                    box-shadow: var(--shadow-lg);
+                    z-index: 1002;
+                    animation: slideInRight 0.3s ease;
+                ">
+                    ✓ Message sent successfully!
+                </div>
+            `;
+            document.body.appendChild(successDiv);
+            
+            setTimeout(() => {
+                successDiv.remove();
+            }, 3000);
+        }
+        
+        // Add CSS for success message animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            .loaded .hero-badge,
+            .loaded .hero-title,
+            .loaded .hero-description,
+            .loaded .hero-actions,
+            .loaded .hero-visual {
+                animation-play-state: running;
+            }
+            
+            /* Improve accessibility */
+            @media (prefers-reduced-motion: reduce) {
+                * {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                }
+            }
+            
+            /* Focus styles for better accessibility */
+            .btn:focus,
+            .nav-link:focus,
+            input:focus,
+            textarea:focus {
+                outline: 3px solid rgba(14, 165, 233, 0.3);
+                outline-offset: 2px;
+            }
+            
+            /* High contrast mode support */
+            @media (prefers-contrast: high) {
+                :root {
+                    --border: #000000;
+                    --text-secondary: #000000;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+            
