@@ -1,151 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VV Iyer | Transforming Enterprise IT Leadership</title>
-    <meta name="description" content="Turning enterprise IT from cost centre into growth engine. 35+ years of ERP implementations, WMS & RFID programs, and operational transformation.">
-    <meta name="keywords" content="ERP Implementation, WMS, RFID, Enterprise Transformation, IT Leadership, Digital Transformation">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>V. V. Iyer — Enterprise IT Leader</title>
+
+  <!-- Basic SEO -->
+  <meta name="description" content="V. V. Iyer — Turning enterprise IT from cost centre into growth engine. ERP, WMS, RFID, transformation leader." />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="background-animation"></div>
-    <div class="scroll-indicator" id="scrollIndicator"></div>
+<body class="page">
 
-    <!-- Navigation -->
-    <nav class="glass-container" id="navbar">
-        <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="insights.html">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">VVI</span>
+        <div class="brand-text">
+          <div class="brand-name">Vaidyanathan Venkataraman</div>
+          <div class="brand-sub">CIO · Enterprise IT · ERP</div>
+        </div>
+      </a>
 
-    <!-- Hero Section -->
+      <!-- nav toggle for mobile -->
+      <input id="nav-toggle" type="checkbox" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true">☰</label>
+
+      <nav class="site-nav">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="insights.html" class="nav-item">Insights</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a class="btn-cv" href="assets/VVI-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span>ENTERPRISE TRANSFORMATION LEADER</span>
-            </div>
-            <h1>Turning Enterprise IT from Cost Centre into Growth Engine</h1>
-            <p class="hero-subtitle">
-                Transforming businesses through strategic ERP implementations, 
-                WMS optimization, and operational excellence with 35+ years of proven results.
-            </p>
-            <div class="cta-group">
-                <a href="about.html" class="cta-primary">Discover My Approach</a>
-                <a href="contact.html" class="cta-secondary">Let's Connect</a>
-            </div>
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <span class="eyebrow">ENTERPRISE TRANSFORMATION LEADER</span>
+          <h1 class="hero-title">Turning enterprise IT from cost centre into growth engine</h1>
+          <p class="hero-lead">I partner with leadership teams to align technology investments with measurable business outcomes — practical pilots, clear KPIs, and governance that reduces rework.</p>
+
+          <div class="hero-ctas">
+            <a class="cta primary" href="contact.html">Work with me</a>
+            <a class="cta ghost" href="insights.html">See insights</a>
+          </div>
+
+          <ul class="quick-facts">
+            <li>35+ years · ERP · WMS · RFID</li>
+            <li>Practical pilots · Fast payback</li>
+            <li>Vendor & program governance</li>
+          </ul>
         </div>
-        
-        <div class="experience-counter">
-            <span class="experience-number">35+</span>
-            <span class="experience-text">Years of Excellence</span>
-        </div>
+
+        <aside class="hero-right">
+          <!-- IMPORTANT: place your image file next to these files and name it exactly -->
+          <div class="photo-wrap">
+            <img src="vv-iyer-professional.jpg" alt="V. V. Iyer photo" class="profile-photo" />
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <!-- Quick Overview Section -->
-    <section class="quick-overview">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-card glass-container">
-                    <div class="overview-icon">🚀</div>
-                    <h3>ERP Excellence</h3>
-                    <p>Large-scale implementations that drive business transformation</p>
-                    <a href="about.html" class="learn-more">Learn More →</a>
-                </div>
+    <!-- small content area preview (keeps homepage useful) -->
+    <section class="content container">
+      <div class="cards">
+        <article class="card">
+          <h3>ERP Excellence</h3>
+          <p>Large-scale SAP/ECC rollouts and governance that create measurable business value.</p>
+          <a href="insights.html" class="card-link">Learn more →</a>
+        </article>
 
-                <div class="overview-card glass-container">
-                    <div class="overview-icon">📊</div>
-                    <h3>WMS & RFID</h3>
-                    <p>Revolutionizing warehouse operations and inventory management</p>
-                    <a href="about.html" class="learn-more">Learn More →</a>
-                </div>
+        <article class="card">
+          <h3>WMS & RFID</h3>
+          <p>Operational programs that lift accuracy, throughput and inventory payback.</p>
+          <a href="insights.html" class="card-link">Learn more →</a>
+        </article>
 
-                <div class="overview-card glass-container">
-                    <div class="overview-icon">⚡</div>
-                    <h3>Strategic Transformation</h3>
-                    <p>Converting IT departments into revenue-driving business enablers</p>
-                    <a href="about.html" class="learn-more">Learn More →</a>
-                </div>
-            </div>
-        </div>
+        <article class="card">
+          <h3>Vendor & Program Governance</h3>
+          <p>Clear KPIs, pilot-first delivery and governance that prevents scope creep.</p>
+          <a href="about.html" class="card-link">Learn more →</a>
+        </article>
+      </div>
     </section>
+  </main>
 
-    <!-- Featured Insights -->
-    <section class="featured-insights">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Insights</h2>
-                <p class="section-subtitle">Thought leadership on enterprise transformation and IT strategy</p>
-            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made with clarity · V. V. Iyer · © <span id="year"></span></small>
+    </div>
+  </footer>
 
-            <div class="insights-grid">
-                <article class="insight-card glass-container">
-                    <div class="insight-category">ERP Strategy</div>
-                    <h3>The ROI of Modern ERP: Beyond Cost Reduction</h3>
-                    <p>How strategic ERP implementations transform cost centers into growth engines through operational excellence and data-driven insights.</p>
-                    <a href="insights.html" class="read-more">Read Article →</a>
-                </article>
-
-                <article class="insight-card glass-container">
-                    <div class="insight-category">Digital Transformation</div>
-                    <h3>WMS Evolution: From Storage to Strategic Asset</h3>
-                    <p>Exploring how modern warehouse management systems with RFID integration create competitive advantages in supply chain operations.</p>
-                    <a href="insights.html" class="read-more">Read Article →</a>
-                </article>
-
-                <article class="insight-card glass-container">
-                    <div class="insight-category">Leadership</div>
-                    <h3>IT Leadership in the Age of Digital Business</h3>
-                    <p>Transforming IT from a support function to a strategic business partner that drives innovation and competitive advantage.</p>
-                    <a href="insights.html" class="read-more">Read Article →</a>
-                </article>
-            </div>
-
-            <div class="cta-center">
-                <a href="insights.html" class="cta-secondary">View All Insights</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content glass-container">
-                <h2>Ready to Transform Your Enterprise IT?</h2>
-                <p>Let's discuss how strategic technology implementation can turn your IT challenges into growth opportunities.</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="cta-primary">Start the Conversation</a>
-                    <a href="about.html" class="cta-secondary">Learn More About My Approach</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <h3>VV Iyer</h3>
-                    <p>Transforming Enterprise IT Leadership</p>
-                </div>
-                <nav class="footer-nav">
-                    <a href="about.html">About</a>
-                    <a href="insights.html">Insights</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 VV Iyer. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
+<script>
+  // small helper: set year and ensure mobile nav closes on link click
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // close mobile menu when a nav item is clicked (if checkbox exists)
+  document.querySelectorAll('.site-nav a').forEach(a=>{
+    a.addEventListener('click', ()=> {
+      const cb = document.getElementById('nav-toggle');
+      if (cb) cb.checked = false;
+    });
+  });
+</script>
 </body>
 </html>

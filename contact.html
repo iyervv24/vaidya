@@ -1,246 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | VV Iyer - Let's Transform Your Enterprise IT</title>
-    <meta name="description" content="Connect with VV Iyer for enterprise IT transformation, ERP implementation, and digital transformation consulting. 35+ years of proven experience.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact · V. V. Iyer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="background-animation"></div>
-    <div class="scroll-indicator" id="scrollIndicator"></div>
-
-    <!-- Navigation -->
-    <nav class="glass-container" id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="insights.html">Insights</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-badge">
-                    <span>LET'S CONNECT</span>
-                </div>
-                <h1>Transform Your Enterprise IT Together</h1>
-                <p class="header-subtitle">
-                    Ready to turn your IT challenges into growth opportunities? 
-                    Let's discuss how strategic technology implementation can drive your business forward.
-                </p>
-            </div>
+<body class="page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">VVI</span>
+        <div class="brand-text">
+          <div class="brand-name">Vaidyanathan Venkataraman</div>
+          <div class="brand-sub">CIO · Enterprise IT · ERP</div>
         </div>
-    </section>
+      </a>
+      <input id="nav-toggle" type="checkbox" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger">☰</label>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a class="btn-cv" href="assets/VVI-CV.pdf" target="_blank">Download CV</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Contact Hero Section -->
-    <section class="contact-hero">
-        <div class="container">
-            <div class="contact-hero-grid">
-                <div class="hero-form-section">
-                    <div class="form-container-enhanced glass-container">
-                        <div class="form-header">
-                            <h2>Start Your Transformation Journey</h2>
-                            <p>Share your challenges and objectives. I'll respond within 24 hours with initial insights and a strategic discussion framework.</p>
-                        </div>
-                        
-                        <form class="contact-form-enhanced" id="contactForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Full Name *</label>
-                                    <input type="text" id="name" name="name" required placeholder="Your full name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="title">Your Title/Role</label>
-                                    <input type="text" id="title" name="title" placeholder="e.g., CTO, IT Director">
-                                </div>
-                            </div>
+  <main class="container content">
+    <h1>Work with Me</h1>
+    <p class="lead">Selective advisory, transformation sprints, and speaking. Please include timeline and budget for faster alignment.</p>
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required placeholder="your.email@company.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
-                                </div>
-                            </div>
+    <form class="contact-form" action="mailto:iyervv24@gmail.com" method="post" enctype="text/plain">
+      <label>Full name
+        <input type="text" name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Brief
+        <textarea name="message" rows="5" placeholder="What problem? timeline? budget?" required></textarea>
+      </label>
+      <button type="submit" class="cta primary">Send Message</button>
+    </form>
 
-                            <div class="form-group">
-                                <label for="company">Company/Organization</label>
-                                <input type="text" id="company" name="company" placeholder="Your company name">
-                            </div>
+    <div class="contact-direct">
+      <h2>Or email directly</h2>
+      <p><a href="mailto:iyervv24@gmail.com">iyervv24@gmail.com</a></p>
+      <h3>Quick facts</h3>
+      <ul>
+        <li>35+ years · ERP · WMS · RFID</li>
+        <li>Practical pilots · Fast payback</li>
+        <li>Vendor &amp; program governance</li>
+      </ul>
+    </div>
+  </main>
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="challenge">Primary Focus Area *</label>
-                                    <select id="challenge" name="challenge" required>
-                                        <option value="">Select your primary interest...</option>
-                                        <option value="erp-implementation">ERP Implementation & Strategy</option>
-                                        <option value="wms-optimization">WMS & Warehouse Optimization</option>
-                                        <option value="digital-transformation">Digital Transformation Leadership</option>
-                                        <option value="it-leadership">IT Organization & Leadership</option>
-                                        <option value="process-optimization">Business Process Optimization</option>
-                                        <option value="cloud-migration">Cloud Migration & Modernization</option>
-                                        <option value="technology-assessment">Technology Assessment & Planning</option>
-                                        <option value="change-management">Change Management Excellence</option>
-                                        <option value="other">Other - Please specify in message</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="timeline">Project Timeline</label>
-                                    <select id="timeline" name="timeline">
-                                        <option value="">Select timeline...</option>
-                                        <option value="immediate">Immediate (Within 1 month)</option>
-                                        <option value="short-term">Short-term (1-3 months)</option>
-                                        <option value="medium-term">Medium-term (3-6 months)</option>
-                                        <option value="long-term">Long-term (6+ months)</option>
-                                        <option value="planning">Strategic planning phase</option>
-                                    </select>
-                                </div>
-                            </div>
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made with clarity · V. V. Iyer · © <span id="year"></span></small>
+    </div>
+  </footer>
 
-                            <div class="form-group">
-                                <label for="message">Tell me about your transformation goals *</label>
-                                <textarea id="message" name="message" rows="5" required 
-                                    placeholder="Please describe your current challenges, strategic objectives, or specific questions. Include details about your industry, company size, and what success looks like for your organization."></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="budget">Investment Range (Optional)</label>
-                                <select id="budget" name="budget">
-                                    <option value="">Select investment range...</option>
-                                    <option value="under-100k">Under $100,000</option>
-                                    <option value="100k-250k">$100,000 - $250,000</option>
-                                    <option value="250k-500k">$250,000 - $500,000</option>
-                                    <option value="500k-1m">$500,000 - $1,000,000</option>
-                                    <option value="1m-2.5m">$1,000,000 - $2,500,000</option>
-                                    <option value="over-2.5m">Over $2,500,000</option>
-                                    <option value="tbd">To be determined</option>
-                                </select>
-                            </div>
-
-                            <div class="form-actions">
-                                <button type="submit" class="submit-btn-enhanced">
-                                    <span class="btn-text">Send Message</span>
-                                    <span class="btn-icon">→</span>
-                                </button>
-                                <p class="form-note-enhanced">
-                                    * Required fields. Your information is kept strictly confidential and never shared with third parties.
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="hero-info-section">
-                    <!-- Enhanced Professional Profile -->
-                    <div class="professional-profile-enhanced glass-container">
-                        <div class="profile-header">
-                            <div class="profile-badge">Enterprise IT Leader</div>
-                            <div class="profile-rating">
-                                <div class="rating-stars">★★★★★</div>
-                                <span class="rating-text">Client Satisfaction</span>
-                            </div>
-                        </div>
-                        
-                        <div class="profile-image-section">
-                            <img src="images/vv-iyer-professional.jpg" alt="VV Iyer - Enterprise IT Transformation Leader" class="profile-image-enhanced">
-                            <div class="profile-status">
-                                <div class="status-indicator"></div>
-                                <span>Available for new projects</span>
-                            </div>
-                        </div>
-                        
-                        <div class="profile-info">
-                            <h3>VV Iyer</h3>
-                            <p class="profile-title">Enterprise IT Transformation Leader</p>
-                            <div class="profile-credentials">
-                                <span class="credential">35+ Years Experience</span>
-                                <span class="credential">100+ Implementations</span>
-                                <span class="credential">240% Average ROI</span>
-                            </div>
-                        </div>
-
-                        <div class="profile-specializations">
-                            <h4>Core Specializations</h4>
-                            <div class="specialization-tags">
-                                <span class="spec-tag">ERP Leadership</span>
-                                <span class="spec-tag">WMS Excellence</span>
-                                <span class="spec-tag">Digital Strategy</span>
-                                <span class="spec-tag">Change Management</span>
-                                <span class="spec-tag">ROI Optimization</span>
-                                <span class="spec-tag">Cloud Migration</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Direct Contact Enhanced -->
-                    <div class="direct-contact-enhanced glass-container">
-                        <h3>Direct Communication</h3>
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <div class="method-icon">📧</div>
-                                <div class="method-details">
-                                    <strong>Email Response</strong>
-                                    <a href="mailto:iyervv24@gmail.com" class="contact-link">iyervv24@gmail.com</a>
-                                    <span class="method-note">Typically responds within 4-6 hours</span>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="method-icon">⏰</div>
-                                <div class="method-details">
-                                    <strong>Response Commitment</strong>
-                                    <span class="method-primary">Within 24 hours</span>
-                                    <span class="method-note">Including weekends for urgent matters</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="method-icon">🌍</div>
-                                <div class="method-details">
-                                    <strong>Global Availability</strong>
-                                    <span class="method-primary">Worldwide projects</span>
-                                    <span class="method-note">Remote and on-site engagement models</span>
-                                </div>
-                            </div>
-
-                            <div class="contact-method">
-                                <div class="method-icon">💼</div>
-                                <div class="method-details">
-                                    <strong>Initial Consultation</strong>
-                                    <span class="method-primary">Complimentary strategy call</span>
-                                    <span class="method-note">45-minute strategic discussion</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Engagement Process -->
-                    <div class="engagement-process glass-container">
-                        <h3>Our Collaboration Process</h3>
-                        <div class="process-timeline">
-                            <div class="process-step">
-                                <div class="step-number-enhanced">1</div>
-                                <div class="step-content-enhanced">
-                                    <strong>Initial Response</strong>
-                                    <span>Acknowledgment within 24 hours with preliminary insights and next steps</span>
-                                    <div class="step-duration">Same day</div>
-                                </div>
-                            </div>
-
-                            <div class="process-step">
-                                <div class="step-number-enhanced">2</div>
-                                <div class="step-content-enhanced">
-                                    <strong>Strategic Discovery Call</strong>
-                                    <span>45-minute complimentary discussion to understand your challenges and objectives</span>
-                                    <div class="step-duration">
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

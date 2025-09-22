@@ -1,239 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insights | VV Iyer - Enterprise IT Thought Leadership</title>
-    <meta name="description" content="Strategic insights, case studies, and thought leadership on ERP implementation, WMS optimization, and enterprise IT transformation by VV Iyer.">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Insights · V. V. Iyer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="background-animation"></div>
-    <div class="scroll-indicator" id="scrollIndicator"></div>
-
-    <!-- Navigation -->
-    <nav class="glass-container" id="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="insights.html" class="active">Insights</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="header-content">
-                <div class="header-badge">
-                    <span>INSIGHTS & PERSPECTIVES</span>
-                </div>
-                <h1>Strategic Insights on Enterprise Transformation</h1>
-                <p class="header-subtitle">
-                    Thought leadership, case studies, and practical perspectives from 
-                    35+ years of enterprise IT transformation experience.
-                </p>
-            </div>
+<body class="page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">VVI</span>
+        <div class="brand-text">
+          <div class="brand-name">Vaidyanathan Venkataraman</div>
+          <div class="brand-sub">CIO · Enterprise IT · ERP</div>
         </div>
-    </section>
+      </a>
+      <input id="nav-toggle" type="checkbox" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-burger">☰</label>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="insights.html" class="active">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn-cv" href="assets/VVI-CV.pdf" target="_blank">Download CV</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Featured Article Enhanced -->
-    <section class="featured-article-enhanced">
-        <div class="container">
-            <article class="featured-showcase glass-container">
-                <div class="featured-header">
-                    <div class="featured-badge-large">Featured Case Study</div>
-                    <div class="featured-metrics">
-                        <div class="metric-highlight">
-                            <span class="metric-number">240%</span>
-                            <span class="metric-text">ROI</span>
-                        </div>
-                        <div class="metric-highlight">
-                            <span class="metric-number">6</span>
-                            <span class="metric-text">Months</span>
-                        </div>
-                        <div class="metric-highlight">
-                            <span class="metric-number">15</span>
-                            <span class="metric-text">Locations</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <h2>The ROI Revolution: Global WMS Transformation Delivers 240% Return</h2>
-                
-                <div class="article-meta-enhanced">
-                    <span class="meta-item">
-                        <span class="meta-icon">📅</span>
-                        <span>March 2025</span>
-                    </span>
-                    <span class="meta-item">
-                        <span class="meta-icon">🏷️</span>
-                        <span>WMS Implementation</span>
-                    </span>
-                    <span class="meta-item">
-                        <span class="meta-icon">⏱️</span>
-                        <span>12 min read</span>
-                    </span>
-                </div>
+  <main class="container content">
+    <h1>Insights &amp; Case Studies</h1>
+    <p class="lead">Stories from 35+ years of driving ERP, WMS, and RFID success.</p>
 
-                <div class="featured-content-grid">
-                    <div class="content-main">
-                        <div class="article-excerpt-enhanced">
-                            <p class="lead-text">
-                                How a leading global distribution company achieved unprecedented operational excellence 
-                                through strategic WMS implementation with RFID integration, transforming 15 warehouse 
-                                locations while maintaining zero downtime.
-                            </p>
-                            <p>
-                                This comprehensive case study explores the methodologies, challenges, and breakthrough 
-                                innovations that delivered measurable business transformation across multiple continents, 
-                                setting new industry benchmarks for inventory accuracy and fulfillment speed.
-                            </p>
-                        </div>
+    <div class="cards">
+      <article class="card">
+        <h3>From ERP Cost Centre to Growth Engine</h3>
+        <p>How SAP ECC rollout improved order-to-cash efficiency and drove measurable ROI.</p>
+        <a href="#" class="card-link">Read more →</a>
+      </article>
+      <article class="card">
+        <h3>Warehouse Transformation with RFID</h3>
+        <p>Achieved 97% inventory accuracy with RFID tagging and automated reconciliation.</p>
+        <a href="#" class="card-link">Read more →</a>
+      </article>
+      <article class="card">
+        <h3>Practical Governance that Prevents Scope Creep</h3>
+        <p>Vendor governance and KPI alignment that kept a global ERP project on track.</p>
+        <a href="#" class="card-link">Read more →</a>
+      </article>
+    </div>
+  </main>
 
-                        <div class="transformation-highlights">
-                            <h3>Transformation Impact</h3>
-                            <div class="highlight-grid">
-                                <div class="highlight-item-enhanced">
-                                    <span class="highlight-icon">📊</span>
-                                    <div class="highlight-content">
-                                        <strong>99.8% Inventory Accuracy</strong>
-                                        <span>From 89.2% to industry-leading precision</span>
-                                    </div>
-                                </div>
-                                <div class="highlight-item-enhanced">
-                                    <span class="highlight-icon">⚡</span>
-                                    <div class="highlight-content">
-                                        <strong>40% Faster Order Fulfillment</strong>
-                                        <span>Reduced processing time from 4.2 to 2.5 hours</span>
-                                    </div>
-                                </div>
-                                <div class="highlight-item-enhanced">
-                                    <span class="highlight-icon">💰</span>
-                                    <div class="highlight-content">
-                                        <strong>$2.8M Annual Cost Savings</strong>
-                                        <span>Through operational efficiency improvements</span>
-                                    </div>
-                                </div>
-                                <div class="highlight-item-enhanced">
-                                    <span class="highlight-icon">🌍</span>
-                                    <div class="highlight-content">
-                                        <strong>Zero Downtime Migration</strong>
-                                        <span>Across all 15 global warehouse locations</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made with clarity · V. V. Iyer · © <span id="year"></span></small>
+    </div>
+  </footer>
 
-                    <div class="content-sidebar">
-                        <div class="case-study-stats glass-container">
-                            <h4>Project Overview</h4>
-                            <div class="stat-item">
-                                <span class="stat-label">Industry</span>
-                                <span class="stat-value">Global Distribution</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label">Company Size</span>
-                                <span class="stat-value">$500M+ Revenue</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label">Locations</span>
-                                <span class="stat-value">15 Warehouses</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label">Timeline</span>
-                                <span class="stat-value">6 Months</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-label">Technology</span>
-                                <span class="stat-value">WMS + RFID</span>
-                            </div>
-                        </div>
-
-                        <div class="methodology-preview glass-container">
-                            <h4>Implementation Methodology</h4>
-                            <div class="method-steps">
-                                <div class="method-step">
-                                    <div class="step-number">1</div>
-                                    <span>Current State Analysis</span>
-                                </div>
-                                <div class="method-step">
-                                    <div class="step-number">2</div>
-                                    <span>Technology Architecture</span>
-                                </div>
-                                <div class="method-step">
-                                    <div class="step-number">3</div>
-                                    <span>Phased Rollout Strategy</span>
-                                </div>
-                                <div class="method-step">
-                                    <div class="step-number">4</div>
-                                    <span>Change Management</span>
-                                </div>
-                                <div class="method-step">
-                                    <div class="step-number">5</div>
-                                    <span>Performance Optimization</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="featured-actions">
-                    <a href="contact.html" class="action-primary">Discuss Your WMS Project</a>
-                    <a href="contact.html" class="action-secondary">Request Full Case Study</a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Strategic Insights Grid -->
-    <section class="insights-collection">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Strategic Insights & Analysis</h2>
-                <p class="section-subtitle">Comprehensive perspectives on enterprise transformation challenges and solutions</p>
-            </div>
-
-            <div class="insights-masonry">
-                <article class="insight-card-enhanced glass-container">
-                    <div class="card-header">
-                        <div class="insight-category-enhanced">ERP Excellence</div>
-                        <div class="insight-impact">High Impact</div>
-                    </div>
-                    <h3>Modern ERP: Beyond Cost Reduction to Growth Engine</h3>
-                    <div class="insight-meta-enhanced">
-                        <span class="meta-date">February 2025</span>
-                        <span class="meta-read-time">8 min read</span>
-                    </div>
-                    <p class="insight-preview">
-                        Strategic ERP implementations that transform cost centers into revenue drivers through 
-                        operational excellence, data insights, and competitive differentiation.
-                    </p>
-                    <div class="insight-metrics-preview">
-                        <span class="metric-tag">200-300% ROI</span>
-                        <span class="metric-tag">25-40% Efficiency</span>
-                        <span class="metric-tag">Multi-Industry</span>
-                    </div>
-                    <div class="insight-key-points">
-                        <div class="key-point">
-                            <span class="point-icon">✓</span>
-                            <span>Strategic implementation methodologies</span>
-                        </div>
-                        <div class="key-point">
-                            <span class="point-icon">✓</span>
-                            <span>Change management excellence</span>
-                        </div>
-                        <div class="key-point">
-                            <span class="point-icon">✓</span>
-                            <span>Measurable business outcomes</span>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="insight-action">Explore ERP Strategy →</a>
-                </article>
-
-                <article class="insight-card-enhanced glass-container">
-                
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
