@@ -1,62 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About · V. V. Iyer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>V. V. Iyer — About</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body class="page">
+<body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner container">
       <a class="brand" href="index.html">
-        <span class="brand-logo">VVI</span>
-        <div class="brand-text">
-          <div class="brand-name">Vaidyanathan Venkataraman</div>
-          <div class="brand-sub">CIO · Enterprise IT · ERP</div>
-        </div>
+        <div class="logo">VVI</div>
+        <div class="brand-text"><div class="name">Vaidyanathan Venkataraman</div><div class="role">CIO · Enterprise IT · ERP</div></div>
       </a>
-      <input id="nav-toggle" type="checkbox" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-burger">☰</label>
+      <button class="burger" aria-label="menu">☰</button>
       <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html" class="active">About</a>
+        <a href="index.html">About</a>
+        <a href="about.html">About</a>
         <a href="insights.html">Insights</a>
         <a href="contact.html">Contact</a>
-        <a class="btn-cv" href="assets/VVI-CV.pdf" target="_blank">Download CV</a>
+        <a class="btn-cv" href="assets/VVI-CV.pdf">Download CV</a>
       </nav>
     </div>
   </header>
 
-  <main class="container content">
-    <h1>Three Decades of Enterprise Transformation</h1>
-    <p class="lead">Turning complex IT challenges into strategic business advantages through pragmatic delivery and governance.</p>
+  <main class="container">
+    <section class="hero" id="hero">
+      <div class="hero-left">
+        <div class="kicker">ABOUT & APPROACH</div>
+        <h1 class="hero-title">Turning enterprise IT from cost centre into growth engine</h1>
+        <p class="lead">I partner with leadership teams to align technology investments with measurable business outcomes — practical pilots, clear KPIs and governance that prevents rework.</p>
+        <div class="hero-cta">
+          <a class="cta" href="contact.html">Work with me</a>
+          <a href="insights.html">See insights</a>
+        </div>
+        <ul class="quick-facts">
+          <li>35+ years · ERP · WMS · RFID</li>
+          <li>Practical pilots · Fast payback</li>
+          <li>Vendor & program governance</li>
+        </ul>
+      </div>
 
-    <h2>About &amp; Approach</h2>
-    <p>I combine business strategy with hands-on delivery to make IT a growth enabler. From SAP ECC rollouts to RFID pilots improving inventory accuracy to 97%, I focus on pilots that pay back and governance that prevents scope creep.</p>
+      <div class="hero-right">
+        <div class="photo-round"><img src="./profile-thumb.webp" alt="profile"></div>
+      </div>
+    </section>
 
-    <div class="cards">
-      <article class="card">
-        <h3>ERP Strategy</h3>
-        <p>Led SAP ECC implementations across Pharma, FMCG, Paper, and Manufacturing sectors.</p>
-      </article>
-      <article class="card">
-        <h3>Infrastructure Leadership</h3>
-        <p>Designed and governed data centers, networks, and enterprise IT infrastructure at scale.</p>
-      </article>
-      <article class="card">
-        <h3>Transformation Leader</h3>
-        <p>Partnered with CXOs to align IT with business growth, cost efficiency, and resilience.</p>
-      </article>
-    </div>
+    <section class="section">
+      <div class="cards">
+        <div class="card"><h3>About & Approach</h3><p>I combine business strategy with hands-on delivery to make IT a growth enabler. From SAP ECC rollouts to RFID pilots improving inventory accuracy to 97%, I focus on pilots that pay back and governance that prevents scope creep.</p><p><a href="#">Learn more →</a></p></div>
+        <div class="card"><h3>WMS & RFID</h3><p>Warehouse and inventory programs improving accuracy and flow.</p><p><a href="#">Learn more →</a></p></div>
+        <div class="card"><h3>Vendor & Program Governance</h3><p>Governance that prevents scope creep and rework.</p><p><a href="#">Learn more →</a></p></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div>Made with clarity · V. V. Iyer · © 2025</div>
+    </footer>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>Made with clarity · V. V. Iyer · © <span id="year"></span></small>
-    </div>
-  </footer>
-
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script src="./main.js"></script>
 </body>
 </html>

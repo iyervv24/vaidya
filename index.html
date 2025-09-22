@@ -1,109 +1,64 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>V. V. Iyer — Enterprise IT Leader</title>
-
-  <!-- Basic SEO -->
-  <meta name="description" content="V. V. Iyer — Turning enterprise IT from cost centre into growth engine. ERP, WMS, RFID, transformation leader." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>V. V. Iyer — Home</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body class="page">
-
+<body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner container">
       <a class="brand" href="index.html">
-        <span class="brand-logo">VVI</span>
-        <div class="brand-text">
-          <div class="brand-name">Vaidyanathan Venkataraman</div>
-          <div class="brand-sub">CIO · Enterprise IT · ERP</div>
-        </div>
+        <div class="logo">VVI</div>
+        <div class="brand-text"><div class="name">Vaidyanathan Venkataraman</div><div class="role">CIO · Enterprise IT · ERP</div></div>
       </a>
-
-      <!-- nav toggle for mobile -->
-      <input id="nav-toggle" type="checkbox" class="nav-toggle" />
-      <label for="nav-toggle" class="nav-burger" aria-hidden="true">☰</label>
-
+      <button class="burger" aria-label="menu">☰</button>
       <nav class="site-nav">
-        <a href="index.html" class="nav-item">Home</a>
-        <a href="about.html" class="nav-item">About</a>
-        <a href="insights.html" class="nav-item">Insights</a>
-        <a href="contact.html" class="nav-item">Contact</a>
-        <a class="btn-cv" href="assets/VVI-CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn-cv" href="assets/VVI-CV.pdf">Download CV</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <span class="eyebrow">ENTERPRISE TRANSFORMATION LEADER</span>
-          <h1 class="hero-title">Turning enterprise IT from cost centre into growth engine</h1>
-          <p class="hero-lead">I partner with leadership teams to align technology investments with measurable business outcomes — practical pilots, clear KPIs, and governance that reduces rework.</p>
-
-          <div class="hero-ctas">
-            <a class="cta primary" href="contact.html">Work with me</a>
-            <a class="cta ghost" href="insights.html">See insights</a>
-          </div>
-
-          <ul class="quick-facts">
-            <li>35+ years · ERP · WMS · RFID</li>
-            <li>Practical pilots · Fast payback</li>
-            <li>Vendor & program governance</li>
-          </ul>
+  <main class="container">
+    <section class="hero" id="hero">
+      <div class="hero-left">
+        <div class="kicker">ENTERPRISE TRANSFORMATION LEADER</div>
+        <h1 class="hero-title">Turning enterprise IT from cost centre into growth engine</h1>
+        <p class="lead">I partner with leadership teams to align technology investments with measurable business outcomes — practical pilots, clear KPIs and governance that prevents rework.</p>
+        <div class="hero-cta">
+          <a class="cta" href="contact.html">Work with me</a>
+          <a href="insights.html">See insights</a>
         </div>
+        <ul class="quick-facts">
+          <li>35+ years · ERP · WMS · RFID</li>
+          <li>Practical pilots · Fast payback</li>
+          <li>Vendor & program governance</li>
+        </ul>
+      </div>
 
-        <aside class="hero-right">
-          <!-- IMPORTANT: place your image file next to these files and name it exactly -->
-          <div class="photo-wrap">
-            <img src="vv-iyer-professional.jpg" alt="V. V. Iyer photo" class="profile-photo" />
-          </div>
-        </aside>
+      <div class="hero-right">
+        <div class="photo-round"><img src="./profile-thumb.webp" alt="profile"></div>
       </div>
     </section>
 
-    <!-- small content area preview (keeps homepage useful) -->
-    <section class="content container">
+    <section class="section">
       <div class="cards">
-        <article class="card">
-          <h3>ERP Excellence</h3>
-          <p>Large-scale SAP/ECC rollouts and governance that create measurable business value.</p>
-          <a href="insights.html" class="card-link">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>WMS & RFID</h3>
-          <p>Operational programs that lift accuracy, throughput and inventory payback.</p>
-          <a href="insights.html" class="card-link">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>Vendor & Program Governance</h3>
-          <p>Clear KPIs, pilot-first delivery and governance that prevents scope creep.</p>
-          <a href="about.html" class="card-link">Learn more →</a>
-        </article>
+        <div class="card"><h3>ERP Excellence</h3><p>Large-scale implementations that drive business transformation.</p><p><a href="#">Learn more →</a></p></div>
+        <div class="card"><h3>WMS & RFID</h3><p>Warehouse and inventory programs improving accuracy and flow.</p><p><a href="#">Learn more →</a></p></div>
+        <div class="card"><h3>Vendor & Program Governance</h3><p>Governance that prevents scope creep and rework.</p><p><a href="#">Learn more →</a></p></div>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div>Made with clarity · V. V. Iyer · © 2025</div>
+    </footer>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>Made with clarity · V. V. Iyer · © <span id="year"></span></small>
-    </div>
-  </footer>
-
-<script>
-  // small helper: set year and ensure mobile nav closes on link click
-  document.getElementById('year').textContent = new Date().getFullYear();
-  // close mobile menu when a nav item is clicked (if checkbox exists)
-  document.querySelectorAll('.site-nav a').forEach(a=>{
-    a.addEventListener('click', ()=> {
-      const cb = document.getElementById('nav-toggle');
-      if (cb) cb.checked = false;
-    });
-  });
-</script>
+  <script src="./main.js"></script>
 </body>
 </html>
