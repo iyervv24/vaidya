@@ -692,11 +692,11 @@
         <h2 class="section-title">Let's Connect</h2>
         
         <div class="contact-container">
-            <div class="contact-item" onclick="openLinkedIn()" style="cursor: pointer;">
+            <a href="https://www.linkedin.com/in/vaidyanathan-venkataraman-94881716" target="_blank" class="contact-item" style="text-decoration: none; color: inherit;">
                 <i class="fab fa-linkedin"></i>
                 <h4>LinkedIn</h4>
                 <p>Connect Professionally</p>
-            </div>
+            </a>
             <div class="contact-item" onclick="copyEmail()" style="cursor: pointer;">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
@@ -792,10 +792,6 @@
         }
 
         // Contact functionality
-        function openLinkedIn() {
-            window.open("https://www.linkedin.com/in/vaidyanathan-venkataraman-94881716", "_blank");
-        }
-
         function copyEmail() {
             var email = "iyervv24@gmail.com"; // UPDATE: Replace with your actual email
             if (navigator.clipboard) {
@@ -823,7 +819,7 @@
         }
 
         function showPhone() {
-            var phone = "+91-9841234567"; // UPDATE: Replace with your actual phone number
+            var phone = "+91-8156002344"; // UPDATE: Replace with your actual phone number
             var phoneText = document.getElementById('phoneText');
             phoneText.textContent = phone;
             phoneText.style.color = '#ff006e';
@@ -835,17 +831,10 @@
         }
 
         function openCalendly() {
-            // UPDATE: Replace with your actual Calendly link
-            var calendlyUrl = "https://calendly.com/iyervv24/30min";
-            
-            // Try to open Calendly first
-            try {
-                window.open(calendlyUrl, "_blank");
-            } catch (e) {
-                // Fallback if Calendly link doesn't work
-                var message = "To schedule a meeting:\n\n1. Email: iyervv24@gmail.com\n2. LinkedIn: Connect via my profile\n3. Phone: Click the phone section above\n\nI'll respond within 24 hours!";
-                alert(message);
-            }
+            var message = "Please email me to schedule a meeting or connect via LinkedIn for immediate discussion.";
+            alert(message);
+            // Optional: Uncomment and update with your actual Calendly link
+            // window.open("https://calendly.com/iyervv24", "_blank");
         }
 
         // Contact item interactions
