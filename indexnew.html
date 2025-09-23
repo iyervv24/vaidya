@@ -697,12 +697,12 @@
                 <h4>LinkedIn</h4>
                 <p>Connect Professionally</p>
             </a>
-            <div class="contact-item" onclick="copyEmail()" style="cursor: pointer;">
+            <div class="contact-item" onclick="iyervv24@gmail.com()" style="cursor: pointer;">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
                 <p id="emailText">Click to Copy Email</p>
             </div>
-            <div class="contact-item" onclick="showPhone()" style="cursor: pointer;">
+            <div class="contact-item" onclick="+918156002344()" style="cursor: pointer;">
                 <i class="fas fa-phone"></i>
                 <h4>Phone</h4>
                 <p id="phoneText">Click to Reveal</p>
@@ -793,48 +793,42 @@
 
         // Contact functionality
         function copyEmail() {
-            var email = "iyervv24@gmail.com"; // UPDATE: Replace with your actual email
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(email).then(function() {
-                    var emailText = document.getElementById('emailText');
-                    emailText.textContent = 'Email Copied!';
-                    emailText.style.color = '#00d9ff';
-                    setTimeout(function() {
-                        emailText.textContent = email;
-                        emailText.style.color = '';
-                    }, 2000);
-                }).catch(function() {
-                    showEmailFallback(email);
-                });
-            } else {
-                showEmailFallback(email);
-            }
-        }
-
-        function showEmailFallback(email) {
-            var emailText = document.getElementById('emailText');
-            emailText.textContent = email;
-            emailText.style.color = '#00d9ff';
-            emailText.style.fontWeight = 'bold';
+            const email = "vaidyanathan.venkataraman@gmail.com"; // Replace with your actual email
+            navigator.clipboard.writeText(email).then(() => {
+                const emailText = document.getElementById('emailText');
+                emailText.textContent = 'Email Copied!';
+                emailText.style.color = '#00d9ff';
+                setTimeout(() => {
+                    emailText.textContent = email;
+                    emailText.style.color = '';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for older browsers
+                const emailText = document.getElementById('emailText');
+                emailText.textContent = email;
+                emailText.style.color = '#00d9ff';
+            });
         }
 
         function showPhone() {
-            var phone = "+91-8156002344"; // UPDATE: Replace with your actual phone number
-            var phoneText = document.getElementById('phoneText');
+            const phone = "+91-9876543210"; // Replace with your actual phone number
+            const phoneText = document.getElementById('phoneText');
             phoneText.textContent = phone;
             phoneText.style.color = '#ff006e';
-            phoneText.style.fontWeight = 'bold';
             
-            setTimeout(function() {
-                phoneText.innerHTML = '<a href="tel:' + phone + '" style="color: #ff006e; text-decoration: none; font-weight: bold;">📞 Call Now</a>';
+            // Add click-to-call functionality
+            setTimeout(() => {
+                phoneText.innerHTML = `<a href="tel:${phone}" style="color: #ff006e; text-decoration: none;">Call Now</a>`;
             }, 1000);
         }
 
         function openCalendly() {
-            var message = "Please email me to schedule a meeting or connect via LinkedIn for immediate discussion.";
-            alert(message);
-            // Optional: Uncomment and update with your actual Calendly link
-            // window.open("https://calendly.com/iyervv24", "_blank");
+            // Replace with your actual Calendly link or preferred scheduling tool
+            const calendlyUrl = "https://calendly.com/your-username"; // Update this
+            window.open(calendlyUrl, '_blank');
+            
+            // Alternative: Show a message if you don't have Calendly yet
+            alert("Please email me to schedule a meeting: vaidyanathan.venkataraman@gmail.com");
         }
 
         // Contact item interactions
