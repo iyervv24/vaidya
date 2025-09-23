@@ -692,22 +692,22 @@
         <h2 class="section-title">Let's Connect</h2>
         
         <div class="contact-container">
-            <a href="https://www.linkedin.com/in/vaidyanathan-venkataraman-94881716" target="_blank" class="contact-item" style="text-decoration: none; color: inherit;">
+            <div class="contact-item">
                 <i class="fab fa-linkedin"></i>
                 <h4>LinkedIn</h4>
-                <p>Connect Professionally</p>
-            </a>
-            <div class="contact-item" onclick="iyervv24@gmail.com()" style="cursor: pointer;">
+                <p>Professional Network</p>
+            </div>
+            <div class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
-                <p id="emailText">Click to Copy Email</p>
+                <p>Direct Communication</p>
             </div>
-            <div class="contact-item" onclick="+918156002344()" style="cursor: pointer;">
+            <div class="contact-item">
                 <i class="fas fa-phone"></i>
                 <h4>Phone</h4>
-                <p id="phoneText">Click to Reveal</p>
+                <p>Immediate Discussion</p>
             </div>
-            <div class="contact-item" onclick="openCalendly()" style="cursor: pointer;">
+            <div class="contact-item">
                 <i class="fas fa-calendar-alt"></i>
                 <h4>Schedule</h4>
                 <p>Book a Meeting</p>
@@ -791,55 +791,14 @@
             });
         }
 
-        // Contact functionality
-        function copyEmail() {
-            const email = "vaidyanathan.venkataraman@gmail.com"; // Replace with your actual email
-            navigator.clipboard.writeText(email).then(() => {
-                const emailText = document.getElementById('emailText');
-                emailText.textContent = 'Email Copied!';
-                emailText.style.color = '#00d9ff';
-                setTimeout(() => {
-                    emailText.textContent = email;
-                    emailText.style.color = '';
-                }, 2000);
-            }).catch(() => {
-                // Fallback for older browsers
-                const emailText = document.getElementById('emailText');
-                emailText.textContent = email;
-                emailText.style.color = '#00d9ff';
-            });
-        }
-
-        function showPhone() {
-            const phone = "+91-9876543210"; // Replace with your actual phone number
-            const phoneText = document.getElementById('phoneText');
-            phoneText.textContent = phone;
-            phoneText.style.color = '#ff006e';
-            
-            // Add click-to-call functionality
-            setTimeout(() => {
-                phoneText.innerHTML = `<a href="tel:${phone}" style="color: #ff006e; text-decoration: none;">Call Now</a>`;
-            }, 1000);
-        }
-
-        function openCalendly() {
-            // Replace with your actual Calendly link or preferred scheduling tool
-            const calendlyUrl = "https://calendly.com/your-username"; // Update this
-            window.open(calendlyUrl, '_blank');
-            
-            // Alternative: Show a message if you don't have Calendly yet
-            alert("Please email me to schedule a meeting: vaidyanathan.venkataraman@gmail.com");
-        }
-
         // Contact item interactions
         function initContactInteractions() {
             document.querySelectorAll('.contact-item').forEach(item => {
-                item.addEventListener('mouseenter', function() {
+                item.addEventListener('click', function() {
                     this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(-10px) scale(1)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-10px) scale(1)';
+                    }, 200);
                 });
             });
         }
