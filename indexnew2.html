@@ -835,21 +835,17 @@
         }
 
         function openCalendly() {
-            // Professional scheduling message
-            var message = "💼 SCHEDULE A MEETING\n\n" +
-                         "Choose your preferred method:\n\n" +
-                         "📧 Email: iyervv24@gmail.com\n" +
-                         "   Subject: 'Meeting Request - [Your Topic]'\n\n" +
-                         "📱 LinkedIn: Message me directly\n" +
-                         "   (Click the LinkedIn icon above)\n\n" +
-                         "📞 Phone: Click the phone icon above\n\n" +
-                         "⚡ I typically respond within 4-6 hours during business days!\n\n" +
-                         "Looking forward to connecting with you! 🚀";
+            // UPDATE: Replace with your actual Calendly link
+            var calendlyUrl = "https://calendly.com/iyervv24/30min";
             
-            alert(message);
-            
-            // Uncomment below when you have Calendly set up:
-               window.open("https://calendly.com/iyervv24/30min", "_blank");
+            // Try to open Calendly first
+            try {
+                window.open(calendlyUrl, "_blank");
+            } catch (e) {
+                // Fallback if Calendly link doesn't work
+                var message = "To schedule a meeting:\n\n1. Email: iyervv24@gmail.com\n2. LinkedIn: Connect via my profile\n3. Phone: Click the phone section above\n\nI'll respond within 24 hours!";
+                alert(message);
+            }
         }
 
         // Contact item interactions
