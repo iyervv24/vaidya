@@ -153,9 +153,9 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             background: linear-gradient(135deg, #00d9ff, #ff006e, #ffd700);
             background-size: 300% 300%;
             -webkit-background-clip: text;
@@ -173,17 +173,17 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 3vw, 1.8rem);
-            margin-bottom: 30px;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            margin-bottom: 20px;
             opacity: 0.9;
             animation: slideUp 2s ease-out 0.5s both;
         }
 
         .hero-desc {
-            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
             opacity: 0.7;
-            line-height: 1.6;
-            margin-bottom: 40px;
+            line-height: 1.5;
+            margin-bottom: 30px;
             animation: slideUp 2s ease-out 1s both;
         }
 
@@ -521,12 +521,32 @@
             nav {
                 top: 10px;
                 right: 10px;
-                padding: 8px 20px;
+                left: 10px;
+                padding: 8px 15px;
             }
 
             nav ul {
-                gap: 15px;
+                gap: 10px;
                 flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-content {
+                margin-top: 0;
+            }
+
+            .profile-photo {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
             }
 
             .experience-grid {
@@ -541,9 +561,93 @@
             .project-showcase {
                 padding: 30px 20px;
             }
+
+            .floating-element {
+                display: none; /* Hide floating elements on mobile to reduce clutter */
+            }
         }
 
-        /* Intersection Observer Animation */
+        @media (max-width: 480px) {
+            .hero {
+                padding-top: 140px;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            nav {
+                padding: 6px 12px;
+            }
+
+            nav ul {
+                gap: 8px;
+            }
+
+            nav ul li a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Profile Photo */
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: profileGlow 3s ease-in-out infinite alternate;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+            border-color: rgba(0, 217, 255, 0.6);
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .profile-photo:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes profileGlow {
+            from {
+                box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
+            }
+            to {
+                box-shadow: 0 0 60px rgba(255, 0, 110, 0.3);
+            }
+        }
+
+        /* Photo upload placeholder */
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.4;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .photo-placeholder:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #00d9ff;
+        }
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(50px);
@@ -573,6 +677,22 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Profile Photo Section -->
+            <div class="profile-photo">
+                <!-- STEP 1: Upload your photo to GitHub repository -->
+                <!-- STEP 2: Replace "your-photo-name.jpg" below with your actual filename -->
+                <img src="./profile-photo.jpg" alt="Vaidyanathan Venkataraman" style="display: none;" id="profileImage">
+                
+                <!-- This placeholder will hide once you add your photo -->
+                <div class="photo-placeholder" id="photoPlaceholder">
+                    <div>
+                        <i class="fas fa-user" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
+                        Upload Your Photo<br>
+                        <small style="opacity: 0.7;">Add profile-photo.jpg to repository</small>
+                    </div>
+                </div>
+            </div>
+            
             <h1>Vaidyanathan Venkataraman</h1>
             <div class="hero-subtitle">IT Strategist | ERP, WMS & RFID Solutions</div>
             <p class="hero-desc">
@@ -650,7 +770,7 @@
                 <h4>Strategic Planning</h4>
             </div>
             <div class="skill-item">
-                <i class="fab fa-sap"></i>
+                <div style="font-size: 2.5rem; color: #00d9ff; margin-bottom: 15px; font-weight: bold;">SAP</div>
                 <h4>SAP R/3 (HANA)</h4>
             </div>
             <div class="skill-item">
@@ -697,10 +817,10 @@
                 <h4>LinkedIn</h4>
                 <p>Connect Professionally</p>
             </div>
-            <div class="contact-item" onclick="copyEmail()" style="cursor: pointer;">
+            <div class="contact-item" onclick="sendEmail()" style="cursor: pointer;">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
-                <p id="emailText">Click to Copy Email</p>
+                <p id="emailText">Send Email</p>
             </div>
             <div class="contact-item" onclick="showPhone()" style="cursor: pointer;">
                 <i class="fas fa-phone"></i>
@@ -796,8 +916,27 @@
             window.open("https://www.linkedin.com/in/vaidyanathan-venkataraman-94881716", "_blank");
         }
 
+        function sendEmail() {
+            var email = "iyervv24@gmail.com";
+            var subject = "Business Inquiry - Meeting Request";
+            var body = "Hello Vaidyanathan,%0D%0A%0D%0AI would like to discuss potential collaboration opportunities.%0D%0A%0D%0ABest regards";
+            
+            var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+            window.location.href = mailtoLink;
+            
+            // Visual feedback
+            var emailText = document.getElementById('emailText');
+            emailText.textContent = 'Opening Email...';
+            emailText.style.color = '#00d9ff';
+            setTimeout(function() {
+                emailText.textContent = 'Send Email';
+                emailText.style.color = '';
+            }, 2000);
+        }
+
+        // Keep the old copyEmail function as backup (not used now)
         function copyEmail() {
-            var email = "iyervv24@gmail.com"; // UPDATE: Replace with your actual email
+            var email = "iyervv24@gmail.com";
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(email).then(function() {
                     var emailText = document.getElementById('emailText');
@@ -849,7 +988,7 @@
             alert(message);
             
             // Uncomment below when you have Calendly set up:
-               window.open("https://calendly.com/iyervv24/30min", "_blank");
+            // window.open("https://calendly.com/your-username/30min", "_blank");
         }
 
         // Contact item interactions
@@ -882,6 +1021,7 @@
             initSkillInteractions();
             initContactInteractions();
             initDynamicBackground();
+            checkProfilePhoto();
 
             // Add loading animation
             document.body.style.opacity = '0';
@@ -890,6 +1030,22 @@
                 document.body.style.opacity = '1';
             }, 100);
         });
+
+        // Check if profile photo exists and show/hide accordingly
+        function checkProfilePhoto() {
+            var img = document.getElementById('profileImage');
+            var placeholder = document.getElementById('photoPlaceholder');
+            
+            img.onload = function() {
+                img.style.display = 'block';
+                placeholder.style.display = 'none';
+            };
+            
+            img.onerror = function() {
+                img.style.display = 'none';
+                placeholder.style.display = 'flex';
+            };
+        }
 
         // Add mouse tracking for interactive effects
         document.addEventListener('mousemove', (e) => {
