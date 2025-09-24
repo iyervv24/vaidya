@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vaidyanathan Venkataraman — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <img src="profile-photo.jpg" alt="profile" class="profile-photo">
+      <h1>Vaidyanathan<br/>Venkataraman</h1>
+      <p class="subtitle">IT Strategist | ERP, WMS & RFID Solutions</p>
+      <p class="lead">Transforming enterprises through strategic technology leadership with 35+ years of experience in SAP implementations, digital transformation, and automation solutions.</p>
+      <button id="openModalBtn" class="cta-button">Explore My Journey</button>
+    </div>
+
+    <!-- Floating elements -->
+    <div class="floating-element el1"></div>
+    <div class="floating-element el2"></div>
+    <div class="floating-element el3"></div>
+    <div class="floating-element el4"></div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <div class="grid">
+      <div class="skill-card">Project Management</div>
+      <div class="skill-card">Vendor Management</div>
+      <div class="skill-card">Team Leadership</div>
+      <div class="skill-card">Strategic Planning</div>
+    </div>
+    <div class="center-cta"><button id="openModalBtn2" class="cta-button">Explore All Expertise</button></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="skillsModal" class="skills-modal" aria-hidden="true">
+    <div class="skills-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="skills-modal-header">
+        <h2 id="modalTitle">Expertise</h2>
+        <button class="skills-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card">SAP Implementations</div>
+        <div class="expertise-card">Warehouse Management (WMS)</div>
+        <div class="expertise-card">RFID & Automation</div>
+        <div class="expertise-card">IT Strategy & Ops</div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact" class="site-footer">
+    <p>Contact: <a href="mailto:iyervv24@gmail.com">iyervv24@gmail.com</a></p>
+  </footer>
+
+  <script>
+    // Modal handling (no debug alerts)
+    document.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("skillsModal");
+      const openBtn = document.getElementById("openModalBtn");
+      const openBtn2 = document.getElementById("openModalBtn2");
+      const closeBtn = document.querySelector(".skills-close");
+
+      function openModal() {
+        modal.style.display = "flex";
+        modal.setAttribute('aria-hidden', 'false');
+      }
+      function closeModal() {
+        modal.style.display = "none";
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      if (openBtn) openBtn.addEventListener("click", openModal);
+      if (openBtn2) openBtn2.addEventListener("click", openModal);
+      if (closeBtn) closeBtn.addEventListener("click", closeModal);
+      window.addEventListener("click", function (e) {
+        if (e.target === modal) closeModal();
+      });
+      window.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,97 +1,544 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vaidyanathan Venkataraman — Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vaidyanathan Venkataraman | IT Strategist &amp; Digital Transformation Leader</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/></head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<div class="bg-animation"></div>
+<div class="particles" id="particles"></div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section class="hero" id="home">
+<div class="hero-content">
+<!-- Profile Photo Section -->
+<div class="profile-photo">
+<!-- STEP 1: Upload your photo to GitHub repository -->
+<!-- STEP 2: Replace "your-photo-name.jpg" below with your actual filename -->
+<img alt="Vaidyanathan Venkataraman" id="profileImage" src="./profile-photo.jpg" style="display: none;"/>
+<!-- This placeholder will hide once you add your photo -->
+<div class="photo-placeholder" id="photoPlaceholder">
+<div>
+<i class="fas fa-user" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
+                        Upload Your Photo<br/>
+<small style="opacity: 0.7;">Add profile-photo.jpg to repository</small>
+</div>
+</div>
+</div>
+<h1>Vaidyanathan Venkataraman</h1>
+<div class="hero-subtitle">IT Strategist | ERP, WMS &amp; RFID Solutions</div>
+<p class="hero-desc">
+                Transforming enterprises through strategic technology leadership with 35+ years of experience 
+                in SAP implementations, digital transformation, and innovative automation solutions.
+            </p>
+<a class="cta-button" href="#experience">Explore My Journey</a>
+</div>
+<div class="floating-element">
+<i class="fas fa-cogs" style="font-size: 2rem; color: #00d9ff;"></i>
+<p style="margin-top: 10px; opacity: 0.8;">SAP ECC 6.0</p>
+</div>
+<div class="floating-element">
+<i class="fas fa-warehouse" style="font-size: 2rem; color: #ff006e;"></i>
+<p style="margin-top: 10px; opacity: 0.8;">WMS Solutions</p>
+</div>
+<div class="floating-element">
+<i class="fas fa-broadcast-tower" style="font-size: 2rem; color: #ffd700;"></i>
+<p style="margin-top: 10px; opacity: 0.8;">RFID Automation</p>
+</div>
+</section>
+<section class="animate-on-scroll" id="experience">
+<h2 class="section-title">Professional Journey</h2>
+<div class="experience-grid">
+<div class="experience-card">
+<h3><i class="fas fa-chess-king"></i> Chief Information Officer</h3>
+<p>Strategic technology leadership driving digital transformation initiatives across complex enterprise environments. Led IT roadmap alignment with business objectives, ensuring scalable and resilient technology infrastructure.</p>
+<div style="display: flex; gap: 10px; margin-top: 20px;">
+<span style="background: rgba(0,217,255,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">#Leadership</span>
+<span style="background: rgba(255,0,110,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">#Strategy</span>
+</div>
+</div>
+<div class="experience-card">
+<h3><i class="fas fa-network-wired"></i> IT Head</h3>
+<p>Comprehensive oversight of enterprise IT operations, infrastructure management, and cross-functional team coordination. Delivered mission-critical systems for Pharma, FMCG, and Manufacturing sectors.</p>
+<div style="display: flex; gap: 10px; margin-top: 20px;">
+<span style="background: rgba(255,215,0,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">#Operations</span>
+<span style="background: rgba(0,217,255,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">#Infrastructure</span>
+</div>
+</div>
+<div class="experience-card">
+<h3><i class="fas fa-project-diagram"></i> Senior Project Manager</h3>
+<p>Currently at Raj Barcode Systems Pvt. Ltd., orchestrating delivery of cutting-edge WMS, barcode/RFID automation, and enterprise solutions. Leading global teams with focus on operational excellence.</p>
+<div style="display: flex; gap: 10px; margin-top: 20px;">
+<span style="background: rgba(255,0,110,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">#ProjectMgmt</span>
+<span style="background: rgba(255,215,0,0.2); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem;">#Automation</span>
+</div>
+</div>
+</div>
+</section>
+<section class="animate-on-scroll" id="skills">
+<h2 class="section-title">Core Expertise</h2>
+<div class="skills-container">
+<div class="skill-item">
+<i class="fas fa-tasks" style="color: #00d9ff;"></i>
+<h4>Project Management</h4>
+</div>
+<div class="skill-item">
+<i class="fas fa-handshake" style="color: #ff006e;"></i>
+<h4>Vendor Management</h4>
+</div>
+<div class="skill-item">
+<i class="fas fa-users-cog" style="color: #ffd700;"></i>
+<h4>Team Leadership</h4>
+</div>
+<div class="skill-item">
+<i class="fas fa-chess" style="color: #00d9ff;"></i>
+<h4>Strategic Planning</h4>
+</div>
+<div class="skill-item">
+<div style="font-size: 2.5rem; color: #00d9ff; margin-bottom: 15px; font-weight: bold;">SAP</div>
+<h4>SAP R/3 (HANA)</h4>
+</div>
+<div class="skill-item">
+<i class="fas fa-chart-line" style="color: #ff006e;"></i>
+<h4>Business Intelligence</h4>
+</div>
+</div>
+<div style="text-align: center; margin-top: 30px;">
+<button class="cta-button" onclick="testOpenModal()" style="display: inline-block; text-decoration: none; cursor: pointer; border: none;">
+<i class="fas fa-expand-arrows-alt" style="margin-right: 10px;"></i>
+                Explore All Expertise
+            </button>
+</div>
+</section>
+<section class="animate-on-scroll" id="projects">
+<h2 class="section-title">Featured Project</h2>
+<div class="project-showcase">
+<div class="project-content">
+<h3><i class="fas fa-award"></i> Major Achievement</h3>
+<div class="project-title">Basco Paints "Zawadika Na Marangi" Loyalty Portal</div>
+<p style="opacity: 0.9; font-size: 1.1rem; margin-bottom: 25px;">
+                    Successfully managed end-to-end delivery of a comprehensive customer loyalty platform, 
+                    driving digital transformation in the paints sector through innovative multi-channel engagement.
+                </p>
+<ul class="project-highlights">
+<li>Delivered multi-channel platform (Web, Android, USSD *338#) for seamless customer engagement</li>
+<li>Coordinated complex vendor relationships and cross-functional teams for on-time delivery</li>
+<li>Implemented robust reward system with MPesa integration for instant customer gratification</li>
+<li>Supervised comprehensive QA and security testing across all channels</li>
+<li>Created scalable architecture for future program expansion and growth</li>
+</ul>
+<div style="margin-top: 30px; padding: 20px; background: rgba(255,215,0,0.1); border-radius: 15px; border-left: 4px solid #ffd700;">
+<h4 style="color: #ffd700; margin-bottom: 10px;"><i class="fas fa-rocket"></i> Impact</h4>
+<p style="opacity: 0.9;">Significantly enhanced customer engagement, repeat purchases, and brand loyalty through accessible and transparent rewards system, establishing a benchmark for digital transformation in the paints industry.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="animate-on-scroll" id="contact">
+<h2 class="section-title">Let's Connect</h2>
+<div class="contact-container">
+<div class="contact-item" onclick="openLinkedIn()" style="cursor: pointer;">
+<i class="fab fa-linkedin"></i>
+<h4>LinkedIn</h4>
+<p>Connect Professionally</p>
+</div>
+<div class="contact-item" onclick="sendEmail()" style="cursor: pointer;">
+<i class="fas fa-envelope"></i>
+<h4>Email</h4>
+<p id="emailText">Send Email</p>
+</div>
+<div class="contact-item" onclick="showPhone()" style="cursor: pointer;">
+<i class="fas fa-phone"></i>
+<h4>Phone</h4>
+<p id="phoneText">Click to Reveal</p>
+</div>
+<div class="contact-item" onclick="openCalendly()" style="cursor: pointer;">
+<i class="fas fa-calendar-alt"></i>
+<h4>Schedule</h4>
+<p>Book a Meeting</p>
+</div>
+</div>
+</section>
+<!-- Skills Modal -->
+<div class="skills-modal" id="skillsModal">
+<div class="skills-modal-content">
+<div class="skills-modal-header">
+<h2><i class="fas fa-cogs" style="margin-right: 15px;"></i>Core Expertise &amp; Leadership</h2>
+<span class="skills-close" onclick="closeSkillsModal()">×</span>
+</div>
+<div class="skills-modal-body">
+<div class="expertise-grid">
+<div class="expertise-card">
+<i class="fas fa-tasks expertise-icon" style="color: #00d9ff;"></i>
+<h3>Project Management Excellence</h3>
+<p>Leading complex enterprise initiatives with precision and strategic vision across global teams and multi-million dollar budgets.</p>
+<ul class="expertise-highlights">
+<li>End-to-end project lifecycle management</li>
+<li>Cross-functional team coordination</li>
+<li>Risk assessment and mitigation</li>
+<li>Stakeholder communication &amp; reporting</li>
+<li>Agile and Waterfall methodologies</li>
+</ul>
+</div>
+<div class="expertise-card">
+<i class="fas fa-handshake expertise-icon" style="color: #ff006e;"></i>
+<h3>Strategic Vendor Management</h3>
+<p>Orchestrating vendor relationships and third-party integrations to deliver seamless enterprise solutions and optimal ROI.</p>
+<ul class="expertise-highlights">
+<li>Vendor selection and negotiation</li>
+<li>Contract management and compliance</li>
+<li>Performance monitoring &amp; SLAs</li>
+<li>Cost optimization strategies</li>
+<li>Quality assurance frameworks</li>
+</ul>
+</div>
+<div class="expertise-card">
+<i class="fas fa-users-cog expertise-icon" style="color: #ffd700;"></i>
+<h3>Team Leadership &amp; Development</h3>
+<p>Building high-performance teams, fostering innovation, and driving organizational transformation through people-first leadership.</p>
+<ul class="expertise-highlights">
+<li>Cross-cultural team management</li>
+<li>Talent development &amp; mentoring</li>
+<li>Change management leadership</li>
+<li>Performance optimization</li>
+<li>Knowledge transfer programs</li>
+</ul>
+</div>
+<div class="expertise-card">
+<i class="fas fa-chess expertise-icon" style="color: #00d9ff;"></i>
+<h3>Strategic Planning &amp; Vision</h3>
+<p>Aligning technology roadmaps with business objectives to drive sustainable growth and competitive advantage.</p>
+<ul class="expertise-highlights">
+<li>IT strategy development</li>
+<li>Digital transformation roadmaps</li>
+<li>Business-technology alignment</li>
+<li>Innovation frameworks</li>
+<li>Long-term vision planning</li>
+</ul>
+</div>
+<div class="expertise-card">
+<span class="sap-icon">SAP</span>
+<h3>SAP R/3 (HANA) Implementation</h3>
+<p>Deep expertise in SAP ecosystem with successful end-to-end implementations across diverse industries and complex enterprise environments.</p>
+<ul class="expertise-highlights">
+<li>SAP ECC 6.0 full lifecycle implementation</li>
+<li>HANA database optimization</li>
+<li>Module integration (FI/CO, MM, SD, PP)</li>
+<li>Data migration and system cutover</li>
+<li>User training and change management</li>
+</ul>
+</div>
+<div class="expertise-card">
+<i class="fas fa-chart-line expertise-icon" style="color: #ff006e;"></i>
+<h3>Business Intelligence &amp; Analytics</h3>
+<p>Transforming data into actionable insights through advanced BI solutions and data-driven decision-making frameworks.</p>
+<ul class="expertise-highlights">
+<li>Data warehouse architecture</li>
+<li>Dashboard and reporting solutions</li>
+<li>KPI development and monitoring</li>
+<li>Predictive analytics implementation</li>
+<li>Real-time business monitoring</li>
+</ul>
+</div>
+</div>
+<div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
+<p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 20px;">
+<i class="fas fa-award" style="color: #ffd700; margin-right: 10px;"></i>
+                        35+ Years of Excellence in Enterprise Technology Leadership
+                    </p>
+<button class="cta-button" onclick="closeSkillsModal()">
+<i class="fas fa-handshake" style="margin-right: 10px;"></i>
+                        Let's Collaborate
+                    </button>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<p>© 2025 Vaidyanathan Venkataraman. Transforming businesses through strategic technology leadership.</p>
+</footer>
+<script>
+        // Particle System
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
 
-  <section id="home" class="hero">
-    <div class="hero-inner">
-      <img src="profile-photo.jpg" alt="profile" class="profile-photo">
-      <h1>Vaidyanathan<br/>Venkataraman</h1>
-      <p class="subtitle">IT Strategist | ERP, WMS & RFID Solutions</p>
-      <p class="lead">Transforming enterprises through strategic technology leadership with 35+ years of experience in SAP implementations, digital transformation, and automation solutions.</p>
-      <button id="openModalBtn" class="cta-button">Explore My Journey</button>
-    </div>
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 4 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
 
-    <!-- Floating elements -->
-    <div class="floating-element el1"></div>
-    <div class="floating-element el2"></div>
-    <div class="floating-element el3"></div>
-    <div class="floating-element el4"></div>
-  </section>
+        // Intersection Observer for animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-  <section id="skills" class="skills-section">
-    <div class="grid">
-      <div class="skill-card">Project Management</div>
-      <div class="skill-card">Vendor Management</div>
-      <div class="skill-card">Team Leadership</div>
-      <div class="skill-card">Strategic Planning</div>
-    </div>
-    <div class="center-cta"><button id="openModalBtn2" class="cta-button">Explore All Expertise</button></div>
-  </section>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
 
-  <!-- Modal -->
-  <div id="skillsModal" class="skills-modal" aria-hidden="true">
-    <div class="skills-modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <div class="skills-modal-header">
-        <h2 id="modalTitle">Expertise</h2>
-        <button class="skills-close" aria-label="Close modal">&times;</button>
-      </div>
-      <div class="expertise-grid">
-        <div class="expertise-card">SAP Implementations</div>
-        <div class="expertise-card">Warehouse Management (WMS)</div>
-        <div class="expertise-card">RFID & Automation</div>
-        <div class="expertise-card">IT Strategy & Ops</div>
-      </div>
-    </div>
-  </div>
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        }
 
-  <footer id="contact" class="site-footer">
-    <p>Contact: <a href="mailto:iyervv24@gmail.com">iyervv24@gmail.com</a></p>
-  </footer>
+        // Smooth scrolling for navigation
+        function initSmoothScrolling() {
+            document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        }
 
-  <script>
-    // Modal handling (no debug alerts)
-    document.addEventListener("DOMContentLoaded", function () {
-      const modal = document.getElementById("skillsModal");
-      const openBtn = document.getElementById("openModalBtn");
-      const openBtn2 = document.getElementById("openModalBtn2");
-      const closeBtn = document.querySelector(".skills-close");
+        // Interactive skill items - Simple approach
+        function initSkillInteractions() {
+            var skillItems = document.querySelectorAll('.skill-item');
+            for (var i = 0; i < skillItems.length; i++) {
+                skillItems[i].addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.05)';
+                });
+                
+                skillItems[i].addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
 
-      function openModal() {
-        modal.style.display = "flex";
-        modal.setAttribute('aria-hidden', 'false');
-      }
-      function closeModal() {
-        modal.style.display = "none";
-        modal.setAttribute('aria-hidden', 'true');
-      }
+                // Add click event
+                skillItems[i].addEventListener('click', function() {
+                    openSkillsModal();
+                });
+            }
+        }
 
-      if (openBtn) openBtn.addEventListener("click", openModal);
-      if (openBtn2) openBtn2.addEventListener("click", openModal);
-      if (closeBtn) closeBtn.addEventListener("click", closeModal);
-      window.addEventListener("click", function (e) {
-        if (e.target === modal) closeModal();
-      });
-      window.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeModal();
-      });
-    });
-  </script>
+        // Simple test function first
+        function testOpenModal() {
+            alert('Button clicked! Opening modal...');
+            var modal = document.getElementById('skillsModal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                alert('Modal should be visible now');
+            } else {
+                alert('Modal element not found!');
+            }
+        }
+
+        // Skills Modal Functions
+        function openSkillsModal() {
+            var modal = document.getElementById('skillsModal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeSkillsModal() {
+            var modal = document.getElementById('skillsModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function(event) {
+            var modal = document.getElementById('skillsModal');
+            if (modal && event.target === modal) {
+                closeSkillsModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeSkillsModal();
+            }
+        });
+
+        // Contact functionality
+        function openLinkedIn() {
+            window.open("https://www.linkedin.com/in/vaidyanathan-venkataraman-94881716", "_blank");
+        }
+
+        function sendEmail() {
+            var email = "iyervv24@gmail.com";
+            var subject = "Business Inquiry - Meeting Request";
+            var body = "Hello Vaidyanathan,%0D%0A%0D%0AI would like to discuss potential collaboration opportunities.%0D%0A%0D%0ABest regards";
+            
+            var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+            window.location.href = mailtoLink;
+            
+            // Visual feedback
+            var emailText = document.getElementById('emailText');
+            emailText.textContent = 'Opening Email...';
+            emailText.style.color = '#00d9ff';
+            setTimeout(function() {
+                emailText.textContent = 'Send Email';
+                emailText.style.color = '';
+            }, 2000);
+        }
+
+        // Keep the old copyEmail function as backup (not used now)
+        function copyEmail() {
+            var email = "iyervv24@gmail.com";
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(function() {
+                    var emailText = document.getElementById('emailText');
+                    emailText.textContent = 'Email Copied!';
+                    emailText.style.color = '#00d9ff';
+                    setTimeout(function() {
+                        emailText.textContent = email;
+                        emailText.style.color = '';
+                    }, 2000);
+                }).catch(function() {
+                    showEmailFallback(email);
+                });
+            } else {
+                showEmailFallback(email);
+            }
+        }
+
+        function showEmailFallback(email) {
+            var emailText = document.getElementById('emailText');
+            emailText.textContent = email;
+            emailText.style.color = '#00d9ff';
+            emailText.style.fontWeight = 'bold';
+        }
+
+        function showPhone() {
+            var phone = "+91-9841234567"; // UPDATE: Replace with your actual phone number
+            var phoneText = document.getElementById('phoneText');
+            phoneText.textContent = phone;
+            phoneText.style.color = '#ff006e';
+            phoneText.style.fontWeight = 'bold';
+            
+            setTimeout(function() {
+                phoneText.innerHTML = '<a href="tel:' + phone + '" style="color: #ff006e; text-decoration: none; font-weight: bold;">📞 Call Now</a>';
+            }, 1000);
+        }
+
+        function openCalendly() {
+            // Professional scheduling message
+            var message = "💼 SCHEDULE A MEETING\n\n" +
+                         "Choose your preferred method:\n\n" +
+                         "📧 Email: iyervv24@gmail.com\n" +
+                         "   Subject: 'Meeting Request - [Your Topic]'\n\n" +
+                         "📱 LinkedIn: Message me directly\n" +
+                         "   (Click the LinkedIn icon above)\n\n" +
+                         "📞 Phone: Click the phone icon above\n\n" +
+                         "⚡ I typically respond within 4-6 hours during business days!\n\n" +
+                         "Looking forward to connecting with you! 🚀";
+            
+            alert(message);
+            
+            // Uncomment below when you have Calendly set up:
+            // window.open("https://calendly.com/your-username/30min", "_blank");
+        }
+
+        // Contact item interactions
+        function initContactInteractions() {
+            document.querySelectorAll('.contact-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-10px) scale(1)';
+                });
+            });
+        }
+
+        // Dynamic background color shift
+        function initDynamicBackground() {
+            let hue = 0;
+            setInterval(() => {
+                hue = (hue + 1) % 360;
+                document.documentElement.style.setProperty('--dynamic-hue', hue);
+            }, 100);
+        }
+
+        // Initialize everything - Simplified
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initScrollAnimations();
+            initSmoothScrolling();
+            initSkillInteractions();
+            initContactInteractions();
+            initDynamicBackground();
+            checkProfilePhoto();
+
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(function() {
+                document.body.style.transition = 'opacity 1s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Check if profile photo exists and show/hide accordingly
+        function checkProfilePhoto() {
+            var img = document.getElementById('profileImage');
+            var placeholder = document.getElementById('photoPlaceholder');
+            
+            img.onload = function() {
+                img.style.display = 'block';
+                placeholder.style.display = 'none';
+            };
+            
+            img.onerror = function() {
+                img.style.display = 'none';
+                placeholder.style.display = 'flex';
+            };
+        }
+
+        // Add mouse tracking for interactive effects
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            document.querySelectorAll('.floating-element').forEach((element, index) => {
+                const speed = (index + 1) * 0.02;
+                const x = mouseX * 20 * speed;
+                const y = mouseY * 20 * speed;
+                element.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+        });
+    </script>
 </body>
 </html>
