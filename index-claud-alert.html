@@ -667,7 +667,86 @@
             opacity: 1;
             transform: translateY(0);
         }
-    </style>
+    
+/* ===== Modal styles added by ChatGPT ===== */
+.skills-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  padding: 24px;
+  -webkit-overflow-scrolling: touch;
+}
+.skills-modal[style*="display: block"],
+.skills-modal[style*="display:block"] {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.skills-modal .skills-modal-content {
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  overflow: auto;
+  background: linear-gradient(180deg, rgba(10,10,10,0.98), rgba(18,18,28,0.98));
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  color: #fff;
+}
+.skills-modal .skills-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.skills-modal .skills-modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.skills-close {
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.skills-modal .expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+.skills-modal .expertise-card {
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.skills-modal .cta-button {
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 680px) {
+  .skills-modal .skills-modal-content {
+    padding: 16px;
+    max-width: 95%;
+    max-height: 92vh;
+  }
+  .skills-modal .skills-modal-header h2 {
+    font-size: 1.05rem;
+  }
+}
+
+</style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -1035,15 +1114,20 @@
             }
         }
 
-        // Skills Modal Functions - Remove alerts
+        // Simple test function first
         function testOpenModal() {
+            alert('Button clicked! Opening modal...');
             var modal = document.getElementById('skillsModal');
             if (modal) {
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
+                alert('Modal should be visible now');
+            } else {
+                alert('Modal element not found!');
             }
         }
 
+        // Skills Modal Functions
         function openSkillsModal() {
             var modal = document.getElementById('skillsModal');
             if (modal) {
@@ -1138,24 +1222,21 @@
         }
 
         function openCalendly() {
-            // Try to open a generic Calendly link or show scheduling options
-            try {
-                // Replace this with your actual Calendly URL when you have one
-                window.open("https://calendly.com/", "_blank");
-            } catch (e) {
-                // Fallback - professional scheduling message
-                var message = "SCHEDULE A MEETING\n\n" +
-                             "Choose your preferred method:\n\n" +
-                             "Email: iyervv24@gmail.com\n" +
-                             "   Subject: 'Meeting Request - [Your Topic]'\n\n" +
-                             "LinkedIn: Message me directly\n" +
-                             "   (Click the LinkedIn icon above)\n\n" +
-                             "Phone: Click the phone icon above\n\n" +
-                             "I typically respond within 4-6 hours during business days!\n\n" +
-                             "Looking forward to connecting with you!";
-                
-                alert(message);
-            }
+            // Professional scheduling message
+            var message = "💼 SCHEDULE A MEETING\n\n" +
+                         "Choose your preferred method:\n\n" +
+                         "📧 Email: iyervv24@gmail.com\n" +
+                         "   Subject: 'Meeting Request - [Your Topic]'\n\n" +
+                         "📱 LinkedIn: Message me directly\n" +
+                         "   (Click the LinkedIn icon above)\n\n" +
+                         "📞 Phone: Click the phone icon above\n\n" +
+                         "⚡ I typically respond within 4-6 hours during business days!\n\n" +
+                         "Looking forward to connecting with you! 🚀";
+            
+            alert(message);
+            
+            // Uncomment below when you have Calendly set up:
+            // window.open("https://calendly.com/your-username/30min", "_blank");
         }
 
         // Contact item interactions
