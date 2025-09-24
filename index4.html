@@ -153,9 +153,9 @@
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 6vw, 4rem);
+            font-size: clamp(2.5rem, 8vw, 5rem);
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             background: linear-gradient(135deg, #00d9ff, #ff006e, #ffd700);
             background-size: 300% 300%;
             -webkit-background-clip: text;
@@ -173,17 +173,17 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1rem, 2.5vw, 1.5rem);
-            margin-bottom: 20px;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 30px;
             opacity: 0.9;
             animation: slideUp 2s ease-out 0.5s both;
         }
 
         .hero-desc {
-            font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+            font-size: clamp(1rem, 2vw, 1.2rem);
             opacity: 0.7;
-            line-height: 1.5;
-            margin-bottom: 30px;
+            line-height: 1.6;
+            margin-bottom: 40px;
             animation: slideUp 2s ease-out 1s both;
         }
 
@@ -521,32 +521,12 @@
             nav {
                 top: 10px;
                 right: 10px;
-                left: 10px;
-                padding: 8px 15px;
+                padding: 8px 20px;
             }
 
             nav ul {
-                gap: 10px;
+                gap: 15px;
                 flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li a {
-                font-size: 0.9rem;
-            }
-
-            .hero {
-                padding-top: 120px;
-            }
-
-            .hero-content {
-                margin-top: 0;
-            }
-
-            .profile-photo {
-                width: 150px;
-                height: 150px;
-                margin-bottom: 20px;
             }
 
             .experience-grid {
@@ -561,93 +541,9 @@
             .project-showcase {
                 padding: 30px 20px;
             }
-
-            .floating-element {
-                display: none; /* Hide floating elements on mobile to reduce clutter */
-            }
         }
 
-        @media (max-width: 480px) {
-            .hero {
-                padding-top: 140px;
-            }
-
-            .profile-photo {
-                width: 120px;
-                height: 120px;
-            }
-
-            nav {
-                padding: 6px 12px;
-            }
-
-            nav ul {
-                gap: 8px;
-            }
-
-            nav ul li a {
-                font-size: 0.8rem;
-            }
-        }
-
-        /* Profile Photo */
-        .profile-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid rgba(0, 217, 255, 0.3);
-            box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
-            margin: 0 auto 20px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.3s ease;
-            animation: profileGlow 3s ease-in-out infinite alternate;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.05);
-            border-color: rgba(0, 217, 255, 0.6);
-            box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .profile-photo:hover img {
-            transform: scale(1.1);
-        }
-
-        @keyframes profileGlow {
-            from {
-                box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
-            }
-            to {
-                box-shadow: 0 0 60px rgba(255, 0, 110, 0.3);
-            }
-        }
-
-        /* Photo upload placeholder */
-        .photo-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-            text-align: center;
-            line-height: 1.4;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .photo-placeholder:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #00d9ff;
-        }
+        /* Intersection Observer Animation */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(50px);
@@ -677,22 +573,6 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <!-- Profile Photo Section -->
-            <div class="profile-photo">
-                <!-- STEP 1: Upload your photo to GitHub repository -->
-                <!-- STEP 2: Replace "your-photo-name.jpg" below with your actual filename -->
-                <img src="./profile-photo.jpg" alt="Vaidyanathan Venkataraman" style="display: none;" id="profileImage">
-                
-                <!-- This placeholder will hide once you add your photo -->
-                <div class="photo-placeholder" id="photoPlaceholder">
-                    <div>
-                        <i class="fas fa-user" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
-                        Upload Your Photo<br>
-                        <small style="opacity: 0.7;">Add profile-photo.jpg to repository</small>
-                    </div>
-                </div>
-            </div>
-            
             <h1>Vaidyanathan Venkataraman</h1>
             <div class="hero-subtitle">IT Strategist | ERP, WMS & RFID Solutions</div>
             <p class="hero-desc">
@@ -753,27 +633,27 @@
         <h2 class="section-title">Core Expertise</h2>
         
         <div class="skills-container">
-            <div class="skill-item" onclick="openModal('projectModal')">
+            <div class="skill-item">
                 <i class="fas fa-tasks"></i>
                 <h4>Project Management</h4>
             </div>
-            <div class="skill-item" onclick="openModal('vendorModal')">
+            <div class="skill-item">
                 <i class="fas fa-handshake"></i>
                 <h4>Vendor Management</h4>
             </div>
-            <div class="skill-item" onclick="openModal('teamModal')">
+            <div class="skill-item">
                 <i class="fas fa-users-cog"></i>
                 <h4>Team Leadership</h4>
             </div>
-            <div class="skill-item" onclick="openModal('strategyModal')">
+            <div class="skill-item">
                 <i class="fas fa-chess"></i>
                 <h4>Strategic Planning</h4>
             </div>
-            <div class="skill-item" onclick="openModal('sapModal')">
-                <div class="sap-icon">SAP</div>
+            <div class="skill-item">
+                <i class="fab fa-sap"></i>
                 <h4>SAP R/3 (HANA)</h4>
             </div>
-            <div class="skill-item" onclick="openModal('biModal')">
+            <div class="skill-item">
                 <i class="fas fa-chart-line"></i>
                 <h4>Business Intelligence</h4>
             </div>
@@ -817,10 +697,10 @@
                 <h4>LinkedIn</h4>
                 <p>Connect Professionally</p>
             </div>
-            <div class="contact-item" onclick="sendEmail()" style="cursor: pointer;">
+            <div class="contact-item" onclick="copyEmail()" style="cursor: pointer;">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
-                <p id="emailText">Send Email</p>
+                <p id="emailText">Click to Copy Email</p>
             </div>
             <div class="contact-item" onclick="showPhone()" style="cursor: pointer;">
                 <i class="fas fa-phone"></i>
@@ -838,244 +718,6 @@
     <footer>
         <p>&copy; 2025 Vaidyanathan Venkataraman. Transforming businesses through strategic technology leadership.</p>
     </footer>
-
-    <!-- Expertise Modals -->
-    <div id="projectModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('projectModal')">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-tasks modal-icon"></i>
-                <h2>Project Management</h2>
-            </div>
-            <div class="modal-body">
-                <div class="skill-highlight">
-                    <strong>35+ Years of Excellence in Enterprise Project Delivery</strong>
-                </div>
-                
-                <h3>🎯 Core Competencies</h3>
-                <ul>
-                    <li>End-to-end SAP ECC 6.0 implementations across multiple industries</li>
-                    <li>Large-scale WMS and RFID automation project leadership</li>
-                    <li>Cross-border team management and global project coordination</li>
-                    <li>Agile and traditional project management methodologies</li>
-                    <li>Risk assessment and mitigation strategies</li>
-                </ul>
-
-                <h3>🚀 Recent Achievement</h3>
-                <ul>
-                    <li>Successfully delivered Basco Paints loyalty platform with multi-channel integration</li>
-                    <li>Managed complex third-party vendor relationships</li>
-                    <li>Delivered on-time, high-quality outcomes with stakeholder satisfaction</li>
-                </ul>
-
-                <h3>💡 Key Strengths</h3>
-                <ul>
-                    <li>Balancing cost optimization with strategic investments</li>
-                    <li>Ensuring regulatory compliance in complex environments</li>
-                    <li>Building resilient digital ecosystems</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="vendorModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('vendorModal')">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-handshake modal-icon"></i>
-                <h2>Vendor Management</h2>
-            </div>
-            <div class="modal-body">
-                <div class="skill-highlight">
-                    <strong>Strategic Partnership & Vendor Relationship Excellence</strong>
-                </div>
-                
-                <h3>🤝 Partnership Strategy</h3>
-                <ul>
-                    <li>Third-party software vendor coordination and management</li>
-                    <li>Contract negotiation and performance optimization</li>
-                    <li>Multi-vendor ecosystem orchestration</li>
-                    <li>Quality assurance and delivery oversight</li>
-                    <li>Cost-effective vendor selection and evaluation</li>
-                </ul>
-
-                <h3>🎯 Proven Track Record</h3>
-                <ul>
-                    <li>Managed complex loyalty platform development with external vendors</li>
-                    <li>Coordinated between client teams and development partners</li>
-                    <li>Ensured timely delivery and quality standards</li>
-                    <li>Maintained vendor relationships across global markets</li>
-                </ul>
-
-                <h3>💼 Key Capabilities</h3>
-                <ul>
-                    <li>Vendor performance monitoring and KPI management</li>
-                    <li>Risk mitigation in vendor partnerships</li>
-                    <li>Technology vendor ecosystem development</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="teamModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('teamModal')">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-users-cog modal-icon"></i>
-                <h2>Team Leadership</h2>
-            </div>
-            <div class="modal-body">
-                <div class="skill-highlight">
-                    <strong>Building High-Performance Technology Teams</strong>
-                </div>
-                
-                <h3>👥 Leadership Philosophy</h3>
-                <ul>
-                    <li>Cross-functional team coordination and mentoring</li>
-                    <li>Building resilient, adaptable technology teams</li>
-                    <li>Fostering innovation and continuous learning culture</li>
-                    <li>Global team management across different time zones</li>
-                    <li>Talent development and succession planning</li>
-                </ul>
-
-                <h3>🌟 Team Development</h3>
-                <ul>
-                    <li>Mentoring teams through complex digital transformations</li>
-                    <li>Creating collaborative work environments</li>
-                    <li>Bridging technical and business stakeholders</li>
-                    <li>Performance optimization and career growth guidance</li>
-                </ul>
-
-                <h3>🚀 Leadership Impact</h3>
-                <ul>
-                    <li>Led diverse teams in Pharma, FMCG, Paper, Textile, and Manufacturing</li>
-                    <li>Delivered complex projects through effective team coordination</li>
-                    <li>Built sustainable team structures for long-term success</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="strategyModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('strategyModal')">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-chess modal-icon"></i>
-                <h2>Strategic Planning</h2>
-            </div>
-            <div class="modal-body">
-                <div class="skill-highlight">
-                    <strong>Aligning Technology Roadmaps with Business Growth</strong>
-                </div>
-                
-                <h3>📋 Strategic Framework</h3>
-                <ul>
-                    <li>IT roadmap development aligned with business objectives</li>
-                    <li>Digital transformation strategy and execution</li>
-                    <li>Technology investment planning and ROI optimization</li>
-                    <li>Enterprise architecture and scalability planning</li>
-                    <li>Innovation strategy and emerging technology adoption</li>
-                </ul>
-
-                <h3>🎯 Business Alignment</h3>
-                <ul>
-                    <li>Bridging business requirements with technology solutions</li>
-                    <li>Long-term strategic vision development</li>
-                    <li>Market analysis and competitive positioning</li>
-                    <li>Risk management and contingency planning</li>
-                </ul>
-
-                <h3>💡 Strategic Outcomes</h3>
-                <ul>
-                    <li>Delivered scalable solutions for future growth</li>
-                    <li>Optimized technology investments across multiple industries</li>
-                    <li>Created sustainable competitive advantages through technology</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="sapModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('sapModal')">&times;</span>
-            <div class="modal-header">
-                <div class="sap-icon">SAP</div>
-                <h2>SAP R/3 (HANA)</h2>
-            </div>
-            <div class="modal-body">
-                <div class="skill-highlight">
-                    <strong>Enterprise SAP Implementation & HANA Optimization Expert</strong>
-                </div>
-                
-                <h3>🏗️ SAP Implementation Excellence</h3>
-                <ul>
-                    <li>End-to-end SAP ECC 6.0 implementations and migrations</li>
-                    <li>SAP HANA database optimization and performance tuning</li>
-                    <li>Multi-module integration across Finance, Supply Chain, and Operations</li>
-                    <li>Custom development and business process optimization</li>
-                    <li>Data migration and legacy system integration</li>
-                </ul>
-
-                <h3>🔧 Technical Expertise</h3>
-                <ul>
-                    <li>SAP HANA in-memory computing capabilities</li>
-                    <li>Real-time analytics and reporting solutions</li>
-                    <li>SAP Fiori user experience implementations</li>
-                    <li>Integration with WMS and RFID automation systems</li>
-                    <li>System landscape optimization and architecture design</li>
-                </ul>
-
-                <h3>🏭 Industry Applications</h3>
-                <ul>
-                    <li>Pharmaceutical industry compliance and validation</li>
-                    <li>FMCG supply chain optimization</li>
-                    <li>Manufacturing operations integration</li>
-                    <li>Regulatory reporting and audit trail management</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="biModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal('biModal')">&times;</span>
-            <div class="modal-header">
-                <i class="fas fa-chart-line modal-icon"></i>
-                <h2>Business Intelligence</h2>
-            </div>
-            <div class="modal-body">
-                <div class="skill-highlight">
-                    <strong>Data-Driven Decision Making & Analytics Excellence</strong>
-                </div>
-                
-                <h3>📊 BI Strategy & Implementation</h3>
-                <ul>
-                    <li>Enterprise data warehouse design and implementation</li>
-                    <li>Real-time dashboard development and KPI monitoring</li>
-                    <li>Predictive analytics and business forecasting</li>
-                    <li>Data governance and quality management</li>
-                    <li>Self-service analytics and user empowerment</li>
-                </ul>
-
-                <h3>🔍 Analytics Capabilities</h3>
-                <ul>
-                    <li>Supply chain analytics and optimization</li>
-                    <li>Financial reporting and regulatory compliance</li>
-                    <li>Customer behavior analysis and loyalty insights</li>
-                    <li>Operational efficiency metrics and performance tracking</li>
-                    <li>Risk analysis and mitigation reporting</li>
-                </ul>
-
-                <h3>💼 Business Impact</h3>
-                <ul>
-                    <li>Enabled data-driven decision making across organizations</li>
-                    <li>Improved operational visibility and performance tracking</li>
-                    <li>Delivered actionable insights for strategic planning</li>
-                    <li>Enhanced competitive positioning through analytics</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <script>
         // Particle System
@@ -1136,44 +778,11 @@
             });
         }
 
-        // Modal Functions
-        function openModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            
-            // Add click outside to close
-            modal.onclick = function(event) {
-                if (event.target === modal) {
-                    closeModal(modalId);
-                }
-            };
-        }
-
-        function closeModal(modalId) {
-            var modal = document.getElementById(modalId);
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
-        }
-
-        // Close modal on Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                var modals = document.querySelectorAll('.modal');
-                modals.forEach(function(modal) {
-                    if (modal.style.display === 'block') {
-                        modal.style.display = 'none';
-                        document.body.style.overflow = 'auto';
-                    }
-                });
-            }
-        });
-
         // Interactive skill items
         function initSkillInteractions() {
             document.querySelectorAll('.skill-item').forEach(skill => {
                 skill.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px) scale(1.05) rotateY(5deg)';
+                    this.style.transform = 'translateY(-5px) scale(1.05) rotateY(10deg)';
                 });
                 
                 skill.addEventListener('mouseleave', function() {
@@ -1187,27 +796,8 @@
             window.open("https://www.linkedin.com/in/vaidyanathan-venkataraman-94881716", "_blank");
         }
 
-        function sendEmail() {
-            var email = "iyervv24@gmail.com";
-            var subject = "Business Inquiry - Meeting Request";
-            var body = "Hello Vaidyanathan,%0D%0A%0D%0AI would like to discuss potential collaboration opportunities.%0D%0A%0D%0ABest regards";
-            
-            var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
-            window.location.href = mailtoLink;
-            
-            // Visual feedback
-            var emailText = document.getElementById('emailText');
-            emailText.textContent = 'Opening Email...';
-            emailText.style.color = '#00d9ff';
-            setTimeout(function() {
-                emailText.textContent = 'Send Email';
-                emailText.style.color = '';
-            }, 2000);
-        }
-
-        // Keep the old copyEmail function as backup (not used now)
         function copyEmail() {
-            var email = "iyervv24@gmail.com";
+            var email = "iyervv24@gmail.com"; // UPDATE: Replace with your actual email
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(email).then(function() {
                     var emailText = document.getElementById('emailText');
@@ -1259,7 +849,7 @@
             alert(message);
             
             // Uncomment below when you have Calendly set up:
-            // window.open("https://calendly.com/your-username/30min", "_blank");
+               window.open("https://calendly.com/iyervv24/30min", "_blank");
         }
 
         // Contact item interactions
@@ -1292,7 +882,6 @@
             initSkillInteractions();
             initContactInteractions();
             initDynamicBackground();
-            checkProfilePhoto();
 
             // Add loading animation
             document.body.style.opacity = '0';
@@ -1301,22 +890,6 @@
                 document.body.style.opacity = '1';
             }, 100);
         });
-
-        // Check if profile photo exists and show/hide accordingly
-        function checkProfilePhoto() {
-            var img = document.getElementById('profileImage');
-            var placeholder = document.getElementById('photoPlaceholder');
-            
-            img.onload = function() {
-                img.style.display = 'block';
-                placeholder.style.display = 'none';
-            };
-            
-            img.onerror = function() {
-                img.style.display = 'none';
-                placeholder.style.display = 'flex';
-            };
-        }
 
         // Add mouse tracking for interactive effects
         document.addEventListener('mousemove', (e) => {
