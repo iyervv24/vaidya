@@ -1045,27 +1045,27 @@
         <h2 class="section-title">Core Expertise</h2>
         
         <div class="skills-container">
-            <div class="skill-item" onclick="openSkillModal('project-management')">
+            <div class="skill-item" onclick="openSkillsModal()">
                 <i class="fas fa-tasks" style="color: #00d9ff;"></i>
                 <h4>Project Management</h4>
             </div>
-            <div class="skill-item" onclick="openSkillModal('vendor-management')">
+            <div class="skill-item" onclick="openSkillsModal()">
                 <i class="fas fa-handshake" style="color: #ff006e;"></i>
                 <h4>Vendor Management</h4>
             </div>
-            <div class="skill-item" onclick="openSkillModal('team-leadership')">
+            <div class="skill-item" onclick="openSkillsModal()">
                 <i class="fas fa-users-cog" style="color: #ffd700;"></i>
                 <h4>Team Leadership</h4>
             </div>
-            <div class="skill-item" onclick="openSkillModal('strategic-planning')">
+            <div class="skill-item" onclick="openSkillsModal()">
                 <i class="fas fa-chess" style="color: #00d9ff;"></i>
                 <h4>Strategic Planning</h4>
             </div>
-            <div class="skill-item" onclick="openSkillModal('sap-hana')">
+            <div class="skill-item" onclick="openSkillsModal()">
                 <div style="font-size: 2.5rem; color: #00d9ff; margin-bottom: 15px; font-weight: bold;">SAP</div>
                 <h4>SAP R/3 (HANA)</h4>
             </div>
-            <div class="skill-item" onclick="openSkillModal('business-intelligence')">
+            <div class="skill-item" onclick="openSkillsModal()">
                 <i class="fas fa-chart-line" style="color: #ff006e;"></i>
                 <h4>Business Intelligence</h4>
             </div>
@@ -1227,7 +1227,7 @@
                         <i class="fas fa-award" style="color: #ffd700; margin-right: 10px;"></i>
                         35+ Years of Excellence in Enterprise Technology Leadership
                     </p>
-                    <button onclick="closeSkillsModal(); scrollToContact();" class="cta-button">
+                    <button onclick="closeSkillsModal()" class="cta-button">
                         <i class="fas fa-handshake" style="margin-right: 10px;"></i>
                         Let's Collaborate
                     </button>
@@ -1301,310 +1301,11 @@
 
         // Skills Modal Functions
         function openSkillsModal() {
-            showAllExpertise();
-        }
-
-        function openSkillModal(skillType) {
-            showSpecificExpertise(skillType);
-        }
-
-        function showAllExpertise() {
             const modal = document.getElementById('skillsModal');
-            const modalBody = modal.querySelector('.skills-modal-body');
-            
-            // Update header
-            const header = modal.querySelector('.skills-modal-header h2');
-            header.innerHTML = '<i class="fas fa-cogs" style="margin-right: 15px;"></i>Core Expertise & Leadership';
-            
-            // Show all expertise cards
-            modalBody.innerHTML = `
-                <div class="expertise-grid">
-                    <div class="expertise-card">
-                        <i class="fas fa-tasks expertise-icon" style="color: #00d9ff;"></i>
-                        <h3>Project Management Excellence</h3>
-                        <p>Leading complex enterprise initiatives with precision and strategic vision across global teams and multi-million dollar budgets.</p>
-                        <ul class="expertise-highlights">
-                            <li>End-to-end project lifecycle management</li>
-                            <li>Cross-functional team coordination</li>
-                            <li>Risk assessment and mitigation</li>
-                            <li>Stakeholder communication & reporting</li>
-                            <li>Agile and Waterfall methodologies</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <i class="fas fa-handshake expertise-icon" style="color: #ff006e;"></i>
-                        <h3>Strategic Vendor Management</h3>
-                        <p>Orchestrating vendor relationships and third-party integrations to deliver seamless enterprise solutions and optimal ROI.</p>
-                        <ul class="expertise-highlights">
-                            <li>Vendor selection and negotiation</li>
-                            <li>Contract management and compliance</li>
-                            <li>Performance monitoring & SLAs</li>
-                            <li>Cost optimization strategies</li>
-                            <li>Quality assurance frameworks</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <i class="fas fa-users-cog expertise-icon" style="color: #ffd700;"></i>
-                        <h3>Team Leadership & Development</h3>
-                        <p>Building high-performance teams, fostering innovation, and driving organizational transformation through people-first leadership.</p>
-                        <ul class="expertise-highlights">
-                            <li>Cross-cultural team management</li>
-                            <li>Talent development & mentoring</li>
-                            <li>Change management leadership</li>
-                            <li>Performance optimization</li>
-                            <li>Knowledge transfer programs</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <i class="fas fa-chess expertise-icon" style="color: #00d9ff;"></i>
-                        <h3>Strategic Planning & Vision</h3>
-                        <p>Aligning technology roadmaps with business objectives to drive sustainable growth and competitive advantage.</p>
-                        <ul class="expertise-highlights">
-                            <li>IT strategy development</li>
-                            <li>Digital transformation roadmaps</li>
-                            <li>Business-technology alignment</li>
-                            <li>Innovation frameworks</li>
-                            <li>Long-term vision planning</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <span class="sap-icon">SAP</span>
-                        <h3>SAP R/3 (HANA) Implementation</h3>
-                        <p>Deep expertise in SAP ecosystem with successful end-to-end implementations across diverse industries and complex enterprise environments.</p>
-                        <ul class="expertise-highlights">
-                            <li>SAP ECC 6.0 full lifecycle implementation</li>
-                            <li>HANA database optimization</li>
-                            <li>Module integration (FI/CO, MM, SD, PP)</li>
-                            <li>Data migration and system cutover</li>
-                            <li>User training and change management</li>
-                        </ul>
-                    </div>
-
-                    <div class="expertise-card">
-                        <i class="fas fa-chart-line expertise-icon" style="color: #ff006e;"></i>
-                        <h3>Business Intelligence & Analytics</h3>
-                        <p>Transforming data into actionable insights through advanced BI solutions and data-driven decision-making frameworks.</p>
-                        <ul class="expertise-highlights">
-                            <li>Data warehouse architecture</li>
-                            <li>Dashboard and reporting solutions</li>
-                            <li>KPI development and monitoring</li>
-                            <li>Predictive analytics implementation</li>
-                            <li>Real-time business monitoring</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 20px;">
-                        <i class="fas fa-award" style="color: #ffd700; margin-right: 10px;"></i>
-                        35+ Years of Excellence in Enterprise Technology Leadership
-                    </p>
-                    <button onclick="closeSkillsModal(); scrollToContact();" class="cta-button">
-                        <i class="fas fa-handshake" style="margin-right: 10px;"></i>
-                        Let's Collaborate
-                    </button>
-                </div>
-            `;
-            
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function showSpecificExpertise(skillType) {
-            const modal = document.getElementById('skillsModal');
-            const modalBody = modal.querySelector('.skills-modal-body');
-            
-            let content = '';
-            let headerText = '';
-            
-            switch(skillType) {
-                case 'project-management':
-                    headerText = '<i class="fas fa-tasks" style="margin-right: 15px;"></i>Project Management Excellence';
-                    content = `
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <i class="fas fa-tasks" style="font-size: 4rem; color: #00d9ff; margin-bottom: 20px; display: block;"></i>
-                            <h2 style="color: #00d9ff; font-size: 2.5rem; margin-bottom: 15px;">Project Management Excellence</h2>
-                            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Leading complex enterprise initiatives with precision and strategic vision across global teams and multi-million dollar budgets.</p>
-                        </div>
-                        
-                        <div class="expertise-grid" style="grid-template-columns: 1fr;">
-                            <div class="expertise-card" style="background: rgba(0,217,255,0.1); border-color: rgba(0,217,255,0.3);">
-                                <h3 style="color: #00d9ff; font-size: 1.5rem; margin-bottom: 20px;">Core Competencies</h3>
-                                <ul class="expertise-highlights" style="font-size: 1rem; line-height: 1.8;">
-                                    <li><strong>End-to-end project lifecycle management:</strong> From initiation to closure, ensuring deliverables meet quality standards</li>
-                                    <li><strong>Cross-functional team coordination:</strong> Managing diverse teams across departments and geographies</li>
-                                    <li><strong>Risk assessment and mitigation:</strong> Proactive identification and management of project risks</li>
-                                    <li><strong>Stakeholder communication & reporting:</strong> Clear, regular updates to all project stakeholders</li>
-                                    <li><strong>Agile and Waterfall methodologies:</strong> Expertise in both traditional and modern project management approaches</li>
-                                    <li><strong>Budget management:</strong> Delivering projects within approved budgets and timelines</li>
-                                    <li><strong>Quality assurance:</strong> Ensuring all deliverables meet enterprise standards</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                    break;
-                    
-                case 'vendor-management':
-                    headerText = '<i class="fas fa-handshake" style="margin-right: 15px;"></i>Strategic Vendor Management';
-                    content = `
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <i class="fas fa-handshake" style="font-size: 4rem; color: #ff006e; margin-bottom: 20px; display: block;"></i>
-                            <h2 style="color: #ff006e; font-size: 2.5rem; margin-bottom: 15px;">Strategic Vendor Management</h2>
-                            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Orchestrating vendor relationships and third-party integrations to deliver seamless enterprise solutions and optimal ROI.</p>
-                        </div>
-                        
-                        <div class="expertise-grid" style="grid-template-columns: 1fr;">
-                            <div class="expertise-card" style="background: rgba(255,0,110,0.1); border-color: rgba(255,0,110,0.3);">
-                                <h3 style="color: #ff006e; font-size: 1.5rem; margin-bottom: 20px;">Core Competencies</h3>
-                                <ul class="expertise-highlights" style="font-size: 1rem; line-height: 1.8;">
-                                    <li><strong>Vendor selection and negotiation:</strong> Strategic evaluation and contract negotiation for optimal terms</li>
-                                    <li><strong>Contract management and compliance:</strong> Ensuring all agreements are met and maintained</li>
-                                    <li><strong>Performance monitoring & SLAs:</strong> Continuous tracking of vendor performance against service level agreements</li>
-                                    <li><strong>Cost optimization strategies:</strong> Maximizing value while minimizing costs through strategic partnerships</li>
-                                    <li><strong>Quality assurance frameworks:</strong> Establishing and maintaining quality standards across all vendor relationships</li>
-                                    <li><strong>Vendor relationship management:</strong> Building long-term strategic partnerships</li>
-                                    <li><strong>Risk management:</strong> Identifying and mitigating vendor-related risks</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                    break;
-                    
-                case 'team-leadership':
-                    headerText = '<i class="fas fa-users-cog" style="margin-right: 15px;"></i>Team Leadership & Development';
-                    content = `
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <i class="fas fa-users-cog" style="font-size: 4rem; color: #ffd700; margin-bottom: 20px; display: block;"></i>
-                            <h2 style="color: #ffd700; font-size: 2.5rem; margin-bottom: 15px;">Team Leadership & Development</h2>
-                            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Building high-performance teams, fostering innovation, and driving organizational transformation through people-first leadership.</p>
-                        </div>
-                        
-                        <div class="expertise-grid" style="grid-template-columns: 1fr;">
-                            <div class="expertise-card" style="background: rgba(255,215,0,0.1); border-color: rgba(255,215,0,0.3);">
-                                <h3 style="color: #ffd700; font-size: 1.5rem; margin-bottom: 20px;">Core Competencies</h3>
-                                <ul class="expertise-highlights" style="font-size: 1rem; line-height: 1.8;">
-                                    <li><strong>Cross-cultural team management:</strong> Leading diverse teams across different cultures and time zones</li>
-                                    <li><strong>Talent development & mentoring:</strong> Nurturing individual growth and career advancement</li>
-                                    <li><strong>Change management leadership:</strong> Guiding teams through organizational transformations</li>
-                                    <li><strong>Performance optimization:</strong> Implementing strategies to maximize team productivity and satisfaction</li>
-                                    <li><strong>Knowledge transfer programs:</strong> Ensuring critical knowledge is shared and preserved</li>
-                                    <li><strong>Team building and motivation:</strong> Creating cohesive, motivated, high-performing teams</li>
-                                    <li><strong>Conflict resolution:</strong> Managing and resolving interpersonal and professional conflicts</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                    break;
-                    
-                case 'strategic-planning':
-                    headerText = '<i class="fas fa-chess" style="margin-right: 15px;"></i>Strategic Planning & Vision';
-                    content = `
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <i class="fas fa-chess" style="font-size: 4rem; color: #00d9ff; margin-bottom: 20px; display: block;"></i>
-                            <h2 style="color: #00d9ff; font-size: 2.5rem; margin-bottom: 15px;">Strategic Planning & Vision</h2>
-                            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Aligning technology roadmaps with business objectives to drive sustainable growth and competitive advantage.</p>
-                        </div>
-                        
-                        <div class="expertise-grid" style="grid-template-columns: 1fr;">
-                            <div class="expertise-card" style="background: rgba(0,217,255,0.1); border-color: rgba(0,217,255,0.3);">
-                                <h3 style="color: #00d9ff; font-size: 1.5rem; margin-bottom: 20px;">Core Competencies</h3>
-                                <ul class="expertise-highlights" style="font-size: 1rem; line-height: 1.8;">
-                                    <li><strong>IT strategy development:</strong> Creating comprehensive technology strategies aligned with business goals</li>
-                                    <li><strong>Digital transformation roadmaps:</strong> Planning and executing enterprise-wide digital initiatives</li>
-                                    <li><strong>Business-technology alignment:</strong> Ensuring technology investments support business objectives</li>
-                                    <li><strong>Innovation frameworks:</strong> Establishing processes for continuous innovation and improvement</li>
-                                    <li><strong>Long-term vision planning:</strong> Developing sustainable technology strategies for future growth</li>
-                                    <li><strong>Competitive analysis:</strong> Understanding market trends and positioning for advantage</li>
-                                    <li><strong>ROI optimization:</strong> Maximizing return on technology investments</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                    break;
-                    
-                case 'sap-hana':
-                    headerText = '<span class="sap-icon">SAP</span> SAP R/3 (HANA) Implementation';
-                    content = `
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <div style="font-size: 4rem; color: #00d9ff; margin-bottom: 20px; font-weight: bold; letter-spacing: 3px;">SAP</div>
-                            <h2 style="color: #00d9ff; font-size: 2.5rem; margin-bottom: 15px;">SAP R/3 (HANA) Implementation</h2>
-                            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Deep expertise in SAP ecosystem with successful end-to-end implementations across diverse industries and complex enterprise environments.</p>
-                        </div>
-                        
-                        <div class="expertise-grid" style="grid-template-columns: 1fr;">
-                            <div class="expertise-card" style="background: rgba(0,217,255,0.1); border-color: rgba(0,217,255,0.3);">
-                                <h3 style="color: #00d9ff; font-size: 1.5rem; margin-bottom: 20px;">Core Competencies</h3>
-                                <ul class="expertise-highlights" style="font-size: 1rem; line-height: 1.8;">
-                                    <li><strong>SAP ECC 6.0 full lifecycle implementation:</strong> Complete implementation from planning to go-live and support</li>
-                                    <li><strong>HANA database optimization:</strong> Performance tuning and optimization of SAP HANA systems</li>
-                                    <li><strong>Module integration (FI/CO, MM, SD, PP):</strong> Seamless integration across Financial, Materials Management, Sales & Production modules</li>
-                                    <li><strong>Data migration and system cutover:</strong> Smooth transition from legacy systems to SAP</li>
-                                    <li><strong>User training and change management:</strong> Comprehensive training programs and change adoption strategies</li>
-                                    <li><strong>Custom development and enhancements:</strong> ABAP development and system customizations</li>
-                                    <li><strong>System integration:</strong> Connecting SAP with third-party systems and applications</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                    break;
-                    
-                case 'business-intelligence':
-                    headerText = '<i class="fas fa-chart-line" style="margin-right: 15px;"></i>Business Intelligence & Analytics';
-                    content = `
-                        <div style="text-align: center; margin-bottom: 30px;">
-                            <i class="fas fa-chart-line" style="font-size: 4rem; color: #ff006e; margin-bottom: 20px; display: block;"></i>
-                            <h2 style="color: #ff006e; font-size: 2.5rem; margin-bottom: 15px;">Business Intelligence & Analytics</h2>
-                            <p style="font-size: 1.2rem; opacity: 0.8; max-width: 600px; margin: 0 auto;">Transforming data into actionable insights through advanced BI solutions and data-driven decision-making frameworks.</p>
-                        </div>
-                        
-                        <div class="expertise-grid" style="grid-template-columns: 1fr;">
-                            <div class="expertise-card" style="background: rgba(255,0,110,0.1); border-color: rgba(255,0,110,0.3);">
-                                <h3 style="color: #ff006e; font-size: 1.5rem; margin-bottom: 20px;">Core Competencies</h3>
-                                <ul class="expertise-highlights" style="font-size: 1rem; line-height: 1.8;">
-                                    <li><strong>Data warehouse architecture:</strong> Designing and implementing enterprise data warehousing solutions</li>
-                                    <li><strong>Dashboard and reporting solutions:</strong> Creating intuitive, actionable business intelligence dashboards</li>
-                                    <li><strong>KPI development and monitoring:</strong> Establishing key performance indicators and tracking systems</li>
-                                    <li><strong>Predictive analytics implementation:</strong> Deploying advanced analytics for forecasting and trend analysis</li>
-                                    <li><strong>Real-time business monitoring:</strong> Implementing systems for live business performance tracking</li>
-                                    <li><strong>Data integration and ETL processes:</strong> Streamlining data collection from multiple sources</li>
-                                    <li><strong>Self-service analytics:</strong> Empowering business users with self-service BI tools</li>
-                                </ul>
-                            </div>
-                        </div>
-                    `;
-                    break;
+            if (modal) {
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
             }
-            
-            // Update header
-            const header = modal.querySelector('.skills-modal-header h2');
-            header.innerHTML = headerText;
-            
-            // Update content
-            modalBody.innerHTML = content + `
-                <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-bottom: 20px;">
-                        <i class="fas fa-award" style="color: #ffd700; margin-right: 10px;"></i>
-                        35+ Years of Excellence in Enterprise Technology Leadership
-                    </p>
-                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                        <button onclick="showAllExpertise()" class="cta-button" style="background: rgba(255,255,255,0.1); color: #ffffff;">
-                            <i class="fas fa-expand-arrows-alt" style="margin-right: 10px;"></i>
-                            View All Expertise
-                        </button>
-                        <button onclick="closeSkillsModal(); scrollToContact();" class="cta-button">
-                            <i class="fas fa-handshake" style="margin-right: 10px;"></i>
-                            Let's Collaborate
-                        </button>
-                    </div>
-                </div>
-            `;
-            
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
         }
 
         function closeSkillsModal() {
@@ -1613,15 +1314,6 @@
                 modal.classList.remove('show');
                 document.body.style.overflow = 'auto';
             }
-        }
-
-        function scrollToContact() {
-            setTimeout(function() {
-                document.getElementById('contact').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }, 300);
         }
 
         // Close modal when clicking outside
@@ -1677,7 +1369,7 @@
         function openCalendly() {
             // Try to open Calendly - replace with actual URL when available
             try {
-                window.open("https://calendly.com/iyervv24/30min", "_blank");
+                window.open("https://calendly.com/", "_blank");
             } catch (e) {
                 // Fallback message
                 const message = "SCHEDULE A MEETING\n\n" +
