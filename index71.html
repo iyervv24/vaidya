@@ -85,16 +85,18 @@
             border-radius: 50px;
             padding: 10px 30px;
             transition: all 0.3s ease;
+            /* Fallback for Safari */
+            background: rgba(26, 26, 46, 0.9);
         }
 
-        @supports not (backdrop-filter: blur(20px)) {
+        @supports (backdrop-filter: blur(20px)) {
             nav {
-                background: rgba(26, 26, 46, 0.9);
+                background: rgba(255, 255, 255, 0.1);
             }
         }
 
         nav:hover {
-            background: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
         }
 
@@ -133,22 +135,19 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            height: auto;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding: 120px 20px 60px 20px;
         }
 
         .hero-content {
             max-width: 800px;
             z-index: 10;
             animation: heroFadeIn 2s ease-out;
-            margin: 0 auto;
         }
 
         @keyframes heroFadeIn {
@@ -160,64 +159,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        /* Profile Photo */
-        .profile-photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid rgba(0, 217, 255, 0.3);
-            box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
-            margin: 0 auto 20px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.3s ease;
-            animation: profileGlow 3s ease-in-out infinite alternate;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.05);
-            border-color: rgba(0, 217, 255, 0.6);
-            box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .profile-photo:hover img {
-            transform: scale(1.1);
-        }
-
-        @keyframes profileGlow {
-            from {
-                box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
-            }
-            to {
-                box-shadow: 0 0 60px rgba(255, 0, 110, 0.3);
-            }
-        }
-
-        .photo-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.05);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-            text-align: center;
-            line-height: 1.4;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .photo-placeholder:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: #00d9ff;
         }
 
         .hero h1 {
@@ -280,7 +221,6 @@
             position: relative;
             overflow: hidden;
             animation: slideUp 2s ease-out 1.5s both;
-            cursor: pointer;
         }
 
         .cta-button::before {
@@ -306,34 +246,27 @@
         /* Floating Elements */
         .floating-element {
             position: absolute;
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             padding: 20px;
             animation: floatAround 20s infinite ease-in-out;
         }
 
-        @supports not (backdrop-filter: blur(20px)) {
-            .floating-element {
-                background: rgba(26, 26, 46, 0.8);
-            }
-        }
-
-        .floating-element:nth-child(2) {
+        .floating-element:nth-child(1) {
             top: 20%;
             left: 10%;
             animation-delay: 0s;
         }
 
-        .floating-element:nth-child(3) {
+        .floating-element:nth-child(2) {
             top: 60%;
             right: 15%;
             animation-delay: 7s;
         }
 
-        .floating-element:nth-child(4) {
+        .floating-element:nth-child(3) {
             bottom: 20%;
             left: 20%;
             animation-delay: 14s;
@@ -385,8 +318,7 @@
         }
 
         .experience-card {
-            background: rgba(255, 255, 255, 0.05);
-            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
@@ -394,12 +326,6 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        @supports not (backdrop-filter: blur(20px)) {
-            .experience-card {
-                background: rgba(26, 26, 46, 0.8);
-            }
         }
 
         .experience-card::before {
@@ -421,7 +347,7 @@
 
         .experience-card:hover {
             transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.05);
             box-shadow: 0 20px 60px rgba(0, 217, 255, 0.1);
         }
 
@@ -448,7 +374,6 @@
 
         .skill-item {
             background: rgba(255, 255, 255, 0.05);
-            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -456,12 +381,6 @@
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
-        }
-
-        @supports not (backdrop-filter: blur(20px)) {
-            .skill-item {
-                background: rgba(26, 26, 46, 0.8);
-            }
         }
 
         .skill-item:hover {
@@ -472,6 +391,7 @@
 
         .skill-item i {
             font-size: 2.5rem;
+            color: #00d9ff;
             margin-bottom: 15px;
             display: block;
         }
@@ -482,183 +402,9 @@
             opacity: 0.9;
         }
 
-        /* Skills Modal */
-        .skills-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-        }
-
-        .skills-modal.show {
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .skills-modal-content {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            margin: 2% auto;
-            padding: 0;
-            border: 1px solid rgba(0, 217, 255, 0.3);
-            border-radius: 20px;
-            width: 90%;
-            max-width: 1000px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 25px 80px rgba(0, 217, 255, 0.3);
-            animation: modalFadeIn 0.3s ease-out;
-        }
-
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .skills-modal-header {
-            background: linear-gradient(135deg, #00d9ff, #ff006e);
-            padding: 25px 30px;
-            border-radius: 20px 20px 0 0;
-            position: relative;
-        }
-
-        .skills-modal-header h2 {
-            color: white;
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-
-        .skills-close {
-            color: white;
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .skills-close:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(90deg);
-        }
-
-        .skills-modal-body {
-            padding: 30px;
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
-        }
-
-        .expertise-card {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .expertise-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, #00d9ff, #ff006e, #ffd700);
-            background-size: 300% 100%;
-            animation: borderGlow 3s linear infinite;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(0, 217, 255, 0.3);
-            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.2);
-        }
-
-        .expertise-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .sap-icon {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #00d9ff;
-            margin-bottom: 15px;
-            display: block;
-            letter-spacing: 2px;
-        }
-
-        .expertise-card h3 {
-            color: #ffffff;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .expertise-card p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .expertise-highlights {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .expertise-highlights li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-
-        .expertise-highlights li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #00d9ff;
-            font-weight: bold;
-        }
-
         /* Project Showcase */
         .project-showcase {
-            background: rgba(255, 255, 255, 0.05);
-            -webkit-backdrop-filter: blur(30px);
+            background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(30px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 25px;
@@ -666,12 +412,6 @@
             margin-top: 60px;
             position: relative;
             overflow: hidden;
-        }
-
-        @supports not (backdrop-filter: blur(30px)) {
-            .project-showcase {
-                background: rgba(26, 26, 46, 0.8);
-            }
         }
 
         .project-showcase::before {
@@ -738,7 +478,6 @@
 
         .contact-item {
             background: rgba(255, 255, 255, 0.05);
-            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
@@ -746,12 +485,6 @@
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
-        }
-
-        @supports not (backdrop-filter: blur(20px)) {
-            .contact-item {
-                background: rgba(26, 26, 46, 0.8);
-            }
         }
 
         .contact-item:hover {
@@ -792,18 +525,6 @@
             font-size: 0.9rem;
         }
 
-        /* Animation class */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
@@ -824,35 +545,17 @@
             }
 
             .hero {
-                padding: 100px 15px 40px 15px;
-                min-height: 100vh;
+                padding-top: 120px;
+            }
+
+            .hero-content {
+                margin-top: 0;
             }
 
             .profile-photo {
-                width: 130px;
-                height: 130px;
-                margin-bottom: 15px;
-            }
-
-            .hero h1 {
-                font-size: clamp(1.8rem, 5vw, 3rem);
-                margin-bottom: 12px;
-            }
-
-            .hero-subtitle {
-                font-size: clamp(0.9rem, 2vw, 1.2rem);
-                margin-bottom: 15px;
-            }
-
-            .hero-desc {
-                font-size: clamp(0.8rem, 1.5vw, 1rem);
-                margin-bottom: 25px;
-                line-height: 1.4;
-            }
-
-            .cta-button {
-                padding: 12px 30px;
-                font-size: 1rem;
+                width: 150px;
+                height: 150px;
+                margin-bottom: 20px;
             }
 
             .experience-grid {
@@ -868,62 +571,19 @@
                 padding: 30px 20px;
             }
 
-            /* Make floating elements visible and smaller on mobile */
             .floating-element {
-                display: block;
-                padding: 10px;
-                font-size: 0.8rem;
-            }
-
-            .floating-element:nth-child(2) {
-                top: 25%;
-                left: 5%;
-            }
-
-            .floating-element:nth-child(3) {
-                top: 35%;
-                right: 8%;
-            }
-
-            .floating-element:nth-child(4) {
-                bottom: 25%;
-                left: 10%;
-            }
-
-            .floating-element i {
-                font-size: 1.5rem !important;
-            }
-
-            .floating-element p {
-                font-size: 0.7rem;
-                margin-top: 5px !important;
-            }
-
-            .skills-modal-content {
-                width: 95%;
-                margin: 5% auto;
-                max-height: 85vh;
-            }
-
-            .expertise-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .skills-modal-body {
-                padding: 20px;
+                display: none; /* Hide floating elements on mobile to reduce clutter */
             }
         }
 
         @media (max-width: 480px) {
             .hero {
-                padding: 90px 10px 30px 10px;
+                padding-top: 140px;
             }
 
             .profile-photo {
-                width: 110px;
-                height: 110px;
-                margin-bottom: 12px;
+                width: 120px;
+                height: 120px;
             }
 
             nav {
@@ -937,23 +597,75 @@
             nav ul li a {
                 font-size: 0.8rem;
             }
+        }
 
-            .cta-button {
-                padding: 10px 25px;
-                font-size: 0.9rem;
-            }
+        /* Profile Photo */
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid rgba(0, 217, 255, 0.3);
+            box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: profileGlow 3s ease-in-out infinite alternate;
+        }
 
-            .floating-element {
-                padding: 8px;
-            }
+        .profile-photo:hover {
+            transform: scale(1.05);
+            border-color: rgba(0, 217, 255, 0.6);
+            box-shadow: 0 0 60px rgba(0, 217, 255, 0.4);
+        }
 
-            .floating-element i {
-                font-size: 1.2rem !important;
-            }
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
 
-            .floating-element p {
-                font-size: 0.6rem;
+        .profile-photo:hover img {
+            transform: scale(1.1);
+        }
+
+        @keyframes profileGlow {
+            from {
+                box-shadow: 0 0 40px rgba(0, 217, 255, 0.2);
             }
+            to {
+                box-shadow: 0 0 60px rgba(255, 0, 110, 0.3);
+            }
+        }
+
+        /* Photo upload placeholder */
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            text-align: center;
+            line-height: 1.4;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .photo-placeholder:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #00d9ff;
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -974,8 +686,13 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
+            <!-- Profile Photo Section -->
             <div class="profile-photo">
+                <!-- STEP 1: Upload your photo to GitHub repository -->
+                <!-- STEP 2: Replace "your-photo-name.jpg" below with your actual filename -->
                 <img src="./profile-photo.jpg" alt="Vaidyanathan Venkataraman" style="display: none;" id="profileImage">
+                
+                <!-- This placeholder will hide once you add your photo -->
                 <div class="photo-placeholder" id="photoPlaceholder">
                     <div>
                         <i class="fas fa-user" style="font-size: 3rem; margin-bottom: 10px; display: block;"></i>
@@ -1045,34 +762,34 @@
         <h2 class="section-title">Core Expertise</h2>
         
         <div class="skills-container">
-            <div class="skill-item" onclick="openSkillsModal()">
+            <div class="skill-item">
                 <i class="fas fa-tasks" style="color: #00d9ff;"></i>
                 <h4>Project Management</h4>
             </div>
-            <div class="skill-item" onclick="openSkillsModal()">
+            <div class="skill-item">
                 <i class="fas fa-handshake" style="color: #ff006e;"></i>
                 <h4>Vendor Management</h4>
             </div>
-            <div class="skill-item" onclick="openSkillsModal()">
+            <div class="skill-item">
                 <i class="fas fa-users-cog" style="color: #ffd700;"></i>
                 <h4>Team Leadership</h4>
             </div>
-            <div class="skill-item" onclick="openSkillsModal()">
+            <div class="skill-item">
                 <i class="fas fa-chess" style="color: #00d9ff;"></i>
                 <h4>Strategic Planning</h4>
             </div>
-            <div class="skill-item" onclick="openSkillsModal()">
+            <div class="skill-item">
                 <div style="font-size: 2.5rem; color: #00d9ff; margin-bottom: 15px; font-weight: bold;">SAP</div>
                 <h4>SAP R/3 (HANA)</h4>
             </div>
-            <div class="skill-item" onclick="openSkillsModal()">
+            <div class="skill-item">
                 <i class="fas fa-chart-line" style="color: #ff006e;"></i>
                 <h4>Business Intelligence</h4>
             </div>
         </div>
 
         <div style="text-align: center; margin-top: 30px;">
-            <button class="cta-button" onclick="openSkillsModal()">
+            <button class="cta-button" style="display: inline-block; text-decoration: none; cursor: pointer; border: none;" onclick="testOpenModal()">
                 <i class="fas fa-expand-arrows-alt" style="margin-right: 10px;"></i>
                 Explore All Expertise
             </button>
@@ -1111,22 +828,22 @@
         <h2 class="section-title">Let's Connect</h2>
         
         <div class="contact-container">
-            <div class="contact-item" onclick="openLinkedIn()">
+            <div class="contact-item" onclick="openLinkedIn()" style="cursor: pointer;">
                 <i class="fab fa-linkedin"></i>
                 <h4>LinkedIn</h4>
                 <p>Connect Professionally</p>
             </div>
-            <div class="contact-item" onclick="sendEmail()">
+            <div class="contact-item" onclick="sendEmail()" style="cursor: pointer;">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
                 <p id="emailText">Send Email</p>
             </div>
-            <div class="contact-item" onclick="showPhone()">
+            <div class="contact-item" onclick="showPhone()" style="cursor: pointer;">
                 <i class="fas fa-phone"></i>
                 <h4>Phone</h4>
                 <p id="phoneText">Click to Reveal</p>
             </div>
-            <div class="contact-item" onclick="openCalendly()">
+            <div class="contact-item" onclick="openCalendly()" style="cursor: pointer;">
                 <i class="fas fa-calendar-alt"></i>
                 <h4>Schedule</h4>
                 <p>Book a Meeting</p>
@@ -1299,26 +1016,53 @@
             });
         }
 
-        // Skills Modal Functions
-        function openSkillsModal() {
-            const modal = document.getElementById('skillsModal');
+        // Interactive skill items - Simple approach
+        function initSkillInteractions() {
+            var skillItems = document.querySelectorAll('.skill-item');
+            for (var i = 0; i < skillItems.length; i++) {
+                skillItems[i].addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.05)';
+                });
+                
+                skillItems[i].addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+
+                // Add click event
+                skillItems[i].addEventListener('click', function() {
+                    openSkillsModal();
+                });
+            }
+        }
+
+        // Skills Modal Functions - Remove alerts
+        function testOpenModal() {
+            var modal = document.getElementById('skillsModal');
             if (modal) {
-                modal.classList.add('show');
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function openSkillsModal() {
+            var modal = document.getElementById('skillsModal');
+            if (modal) {
+                modal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
             }
         }
 
         function closeSkillsModal() {
-            const modal = document.getElementById('skillsModal');
+            var modal = document.getElementById('skillsModal');
             if (modal) {
-                modal.classList.remove('show');
+                modal.style.display = 'none';
                 document.body.style.overflow = 'auto';
             }
         }
 
         // Close modal when clicking outside
         document.addEventListener('click', function(event) {
-            const modal = document.getElementById('skillsModal');
+            var modal = document.getElementById('skillsModal');
             if (modal && event.target === modal) {
                 closeSkillsModal();
             }
@@ -1337,15 +1081,15 @@
         }
 
         function sendEmail() {
-            const email = "iyervv24@gmail.com";
-            const subject = "Business Inquiry - Meeting Request";
-            const body = "Hello Vaidyanathan,%0D%0A%0D%0AI would like to discuss potential collaboration opportunities.%0D%0A%0D%0ABest regards";
+            var email = "iyervv24@gmail.com";
+            var subject = "Business Inquiry - Meeting Request";
+            var body = "Hello Vaidyanathan,%0D%0A%0D%0AI would like to discuss potential collaboration opportunities.%0D%0A%0D%0ABest regards";
             
-            const mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
+            var mailtoLink = "mailto:" + email + "?subject=" + subject + "&body=" + body;
             window.location.href = mailtoLink;
             
             // Visual feedback
-            const emailText = document.getElementById('emailText');
+            var emailText = document.getElementById('emailText');
             emailText.textContent = 'Opening Email...';
             emailText.style.color = '#00d9ff';
             setTimeout(function() {
@@ -1354,9 +1098,36 @@
             }, 2000);
         }
 
+        // Keep the old copyEmail function as backup (not used now)
+        function copyEmail() {
+            var email = "iyervv24@gmail.com";
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(email).then(function() {
+                    var emailText = document.getElementById('emailText');
+                    emailText.textContent = 'Email Copied!';
+                    emailText.style.color = '#00d9ff';
+                    setTimeout(function() {
+                        emailText.textContent = email;
+                        emailText.style.color = '';
+                    }, 2000);
+                }).catch(function() {
+                    showEmailFallback(email);
+                });
+            } else {
+                showEmailFallback(email);
+            }
+        }
+
+        function showEmailFallback(email) {
+            var emailText = document.getElementById('emailText');
+            emailText.textContent = email;
+            emailText.style.color = '#00d9ff';
+            emailText.style.fontWeight = 'bold';
+        }
+
         function showPhone() {
-            const phone = "+91-9841234567"; // Replace with actual phone number
-            const phoneText = document.getElementById('phoneText');
+            var phone = "+91-9841234567"; // UPDATE: Replace with your actual phone number
+            var phoneText = document.getElementById('phoneText');
             phoneText.textContent = phone;
             phoneText.style.color = '#ff006e';
             phoneText.style.fontWeight = 'bold';
@@ -1367,32 +1138,24 @@
         }
 
         function openCalendly() {
-            // Try to open Calendly - replace with actual URL when available
+            // Try to open a generic Calendly link or show scheduling options
             try {
+                // Replace this with your actual Calendly URL when you have one
                 window.open("https://calendly.com/", "_blank");
             } catch (e) {
-                // Fallback message
-                const message = "SCHEDULE A MEETING\n\n" +
-                               "Choose your preferred method:\n\n" +
-                               "Email: iyervv24@gmail.com\n" +
-                               "LinkedIn: Connect via my profile\n" +
-                               "Phone: Click the phone section above\n\n" +
-                               "I typically respond within 4-6 hours during business days!";
+                // Fallback - professional scheduling message
+                var message = "SCHEDULE A MEETING\n\n" +
+                             "Choose your preferred method:\n\n" +
+                             "Email: iyervv24@gmail.com\n" +
+                             "   Subject: 'Meeting Request - [Your Topic]'\n\n" +
+                             "LinkedIn: Message me directly\n" +
+                             "   (Click the LinkedIn icon above)\n\n" +
+                             "Phone: Click the phone icon above\n\n" +
+                             "I typically respond within 4-6 hours during business days!\n\n" +
+                             "Looking forward to connecting with you!";
+                
                 alert(message);
             }
-        }
-
-        // Interactive skill items
-        function initSkillInteractions() {
-            document.querySelectorAll('.skill-item').forEach(skill => {
-                skill.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px) scale(1.05)';
-                });
-                
-                skill.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
         }
 
         // Contact item interactions
@@ -1408,10 +1171,37 @@
             });
         }
 
+        // Dynamic background color shift
+        function initDynamicBackground() {
+            let hue = 0;
+            setInterval(() => {
+                hue = (hue + 1) % 360;
+                document.documentElement.style.setProperty('--dynamic-hue', hue);
+            }, 100);
+        }
+
+        // Initialize everything - Simplified
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            initScrollAnimations();
+            initSmoothScrolling();
+            initSkillInteractions();
+            initContactInteractions();
+            initDynamicBackground();
+            checkProfilePhoto();
+
+            // Add loading animation
+            document.body.style.opacity = '0';
+            setTimeout(function() {
+                document.body.style.transition = 'opacity 1s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
         // Check if profile photo exists and show/hide accordingly
         function checkProfilePhoto() {
-            const img = document.getElementById('profileImage');
-            const placeholder = document.getElementById('photoPlaceholder');
+            var img = document.getElementById('profileImage');
+            var placeholder = document.getElementById('photoPlaceholder');
             
             img.onload = function() {
                 img.style.display = 'block';
@@ -1435,23 +1225,6 @@
                 const y = mouseY * 20 * speed;
                 element.style.transform += ` translate(${x}px, ${y}px)`;
             });
-        });
-
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', function() {
-            createParticles();
-            initScrollAnimations();
-            initSmoothScrolling();
-            initSkillInteractions();
-            initContactInteractions();
-            checkProfilePhoto();
-
-            // Add loading animation
-            document.body.style.opacity = '0';
-            setTimeout(function() {
-                document.body.style.transition = 'opacity 1s ease';
-                document.body.style.opacity = '1';
-            }, 100);
         });
     </script>
 </body>
